@@ -1,0 +1,151 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Rafael - Desarrollador web especializado en páginas web modernas, responsive y optimizadas. Servicios de desarrollo web personalizado y diseño responsive.">
+        <meta property="og:title" content="WebDev.Rafel - Desarrollador Web Moderno">
+        <meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="webdevrafelfavicon.png" type="image/x-icon">
+        <title>Desarrollador Web | Páginas Web Modernas y Responsive</title>
+    </head>
+    <body>
+        <header class="header">
+            <input type="checkbox" class="header__checkbox" id="open-menu">
+            <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+            <div class="header__logo-container">
+                <img class="hader__logo" src="webdevrafel.png">
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#profile">Acerca de mí</a></li>
+                    <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
+                    <li class="header__nav-item"><a href="#form">Contactame</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="profile" id="profile">
+            <div class="profile__wrapper">
+                <div class="profiel__img-container">
+                    <img src="webdevrafel.png" class="profile__img">
+                </div>
+                <div class="profile__data-container">
+                    <div class="profile__data">
+                        <div class="profile__description">
+                            <h1>WEBDEV.RAFEL</h1>
+                            <p>
+                                <h2 class="sbm">¿Qué es webdevrafel</h2>
+                                WebDev.Rafel es mi marca personal. Un espacio donde muestro mi pasión, mi creatividad y mi visión en el mundo del desarrollo web. Aquí encontrarás proyectos que reflejan mi estilo, dedicación y enfoque en construir experiencias digitales modernas, prácticas y visualmente atractivas.
+                                <br>
+                                
+                                Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia.
+                            
+                                <br>
+                                <br>
+                                💼 Servicios
+                                <br>
+                                <br>
+                                <ul>
+                                    <li class="servicios">Páginas web personalizadas</li>
+                                    <li class="servicios">  Diseño responsive y moderno</li>
+                                    <li class="servicios">       Optimización de sitios existentes</li>
+                                </ul>
+                                
+                            </p>
+                        </div>
+                        <div class="profiel__skills-container">
+                            <h2>HABILIDADES</h2>
+                            <ul>
+                                <li class="profile__skill">
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--100">100%</div>
+                                    </div>
+                                    <span class="profile__skill-name">HTML</span>
+                                </li>
+                                <li class="profile__skill">
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--100">100%</div>
+                                    </div>
+                                    <span class="profile__skill-name">CSS</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="portfolio" id="portfolio">
+            <h2 class="portfolio__title"> SECCIÓN DE PORTAFOLIO
+                                            (MIS PROYECTOS)
+            </h2>
+            <div class="portfolio__project-container">
+                <div class="portfolio__project">
+                    
+                    <h2 class="portfolio__project-name"><a href="salon-de-belleza/index.html" target="_blank">SALON DE BELLEZA</a></h2>
+                </div>
+                <div class="portfolio__project">
+                    
+                    <h2 class="portfolio__project-name"><a href="boutique/index.html" target="_blank">BOUTIQUE</a></h2>
+                </div>
+                <div class="portfolio__project">
+                    <h2 class="portfolio__project-name"><a href="store-cell/index.html" target="_blank">STORE CELL</a></h2>
+                </div>
+                <div class="portfolio__project">
+                    <h2 class="portfolio__project-name"><a href="restaurant/index.html" target="_blank">RESTAURANT PAGE</a></h2>
+                </div>
+                <div class="portfolio__project">
+                    <h2 class="portfolio__project-name"><a href="store-shoes/index.html" target="_blank">STORE SHOES</a></h2>
+                </div>
+            </div>
+        </section>
+        <section class="form" id="form">
+            <h2 class="form__title">CONTACTO</h2>
+            <form class="form__form" action="https://formspree.io/f/mjkekdqz" method="POST">
+
+                <div class="form__input-container">
+                <label> Nombre
+                    <input type="text" name="firstName" placeholder="Jhon" required>
+                </label>
+                </div>
+            
+                <div class="form__input-container">
+                <label> Apellido
+                    <input type="text" name="lastName" placeholder="Doe" required>
+                </label>
+                </div>
+            
+                <div class="form__input-container">
+                <label> E-mail
+                    <input type="email" name="email" placeholder="mail@example.com" required>
+                </label>
+                </div>
+            
+                <div class="form__input-container">
+                <label> Mensaje
+                    <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+                </label>
+                </div>
+            
+                <div class="form__input-container">
+                <input type="submit" value="Enviar">
+                </div>
+            </form>
+            
+        </section>
+
+        <a href="https://wa.me/573122915287?text=Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20Bella%20Nails%20%26%20Beauty" class="whatsapp-btn" target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103"/>
+            </svg>
+            Contactame
+        </a>
+
+
+        <footer>
+            © 2025 [by webdevrafel]. Todos los derechos reservados.
+            Contacto: webdev.rafel@gmail.com |
+            Política de Privacidad | Términos de Uso | Cookies <hr>
+        </footer>
+    </body>
+    </html>

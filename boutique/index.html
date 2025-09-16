@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ÉLITE BOUTIQUE - Moda Exclusiva</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">ÉLITE</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#collections">Colecciones</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>MODA EXCLUSIVA</h1>
+            <p>Descubre la elegancia en cada prenda</p>
+            <a href="#collections" class="cta-button">Explorar Colección</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestra Filosofía</h2>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-icon">✨</div>
+                    <h3>Calidad Premium</h3>
+                    <p>Seleccionamos cuidadosamente cada pieza para garantizar la máxima calidad y durabilidad en nuestras prendas exclusivas.</p>
+                </div>
+                <div class="about-card fade-in-delay">
+                    <div class="about-icon">🎨</div>
+                    <h3>Diseño Único</h3>
+                    <p>Cada colección refleja las últimas tendencias de la moda internacional con un toque distintivo y sofisticado.</p>
+                </div>
+                <div class="about-card fade-in-delay-2">
+                    <div class="about-icon">👑</div>
+                    <h3>Experiencia VIP</h3>
+                    <p>Brindamos un servicio personalizado y exclusivo para que cada cliente se sienta único y especial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkboxes ocultos para navegación -->
+    <input type="checkbox" id="damas-toggle">
+    <input type="checkbox" id="hombres-toggle">
+    <input type="checkbox" id="ninos-toggle">
+
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestras Colecciones</h2>
+            <div class="categories-grid">
+                <div class="category-card fade-in">
+                    <div class="category-image">👗</div>
+                    <div class="category-content">
+                        <h3>DAMAS</h3>
+                        <p>Elegancia y sofisticación en cada prenda</p>
+                        <label for="damas-toggle" class="view-btn">VER</label>
+                    </div>
+                </div>
+                <div class="category-card fade-in-delay">
+                    <div class="category-image">👔</div>
+                    <div class="category-content">
+                        <h3>HOMBRES</h3>
+                        <p>Estilo masculino con distinción</p>
+                        <label for="hombres-toggle" class="view-btn">VER</label>
+                    </div>
+                </div>
+                <div class="category-card fade-in-delay-2">
+                    <div class="category-image">👶</div>
+                    <div class="category-content">
+                        <h3>NIÑOS</h3>
+                        <p>Moda divertida y cómoda para los pequeños</p>
+                        <label for="ninos-toggle" class="view-btn">VER</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Damas -->
+    <section class="category-section damas-section">
+        <div class="container">
+            <div class="category-header">
+                <label for="damas-toggle" class="back-btn">&larr; Volver</label>
+                <h2 class="section-title">COLECCIÓN DAMAS</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">👗</div>
+                    <h4>Vestido Elegante</h4>
+                    <p>Vestido de noche en seda negra</p>
+                    <span class="price">$299.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👚</div>
+                    <h4>Blusa Ejecutiva</h4>
+                    <p>Blusa blanca de algodón premium</p>
+                    <span class="price">$129.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👖</div>
+                    <h4>Pantalón Slim</h4>
+                    <p>Pantalón de vestir negro</p>
+                    <span class="price">$189.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👠</div>
+                    <h4>Zapatos de Tacón</h4>
+                    <p>Tacones altos en cuero</p>
+                    <span class="price">$249.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👜</div>
+                    <h4>Bolso de Mano</h4>
+                    <p>Cartera ejecutiva de cuero</p>
+                    <span class="price">$199.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">💍</div>
+                    <h4>Conjunto de Joyas</h4>
+                    <p>Collar y aretes dorados</p>
+                    <span class="price">$89.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Hombres -->
+    <section class="category-section hombres-section">
+        <div class="container">
+            <div class="category-header">
+                <label for="hombres-toggle" class="back-btn">&larr; Volver</label>
+                <h2 class="section-title">COLECCIÓN HOMBRES</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🤵</div>
+                    <h4>Traje Ejecutivo</h4>
+                    <p>Traje completo en lana italiana</p>
+                    <span class="price">$599.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👔</div>
+                    <h4>Camisa Formal</h4>
+                    <p>Camisa blanca de algodón</p>
+                    <span class="price">$149.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👖</div>
+                    <h4>Pantalón Chino</h4>
+                    <p>Pantalón casual elegante</p>
+                    <span class="price">$179.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👞</div>
+                    <h4>Zapatos Oxford</h4>
+                    <p>Zapatos de cuero negro</p>
+                    <span class="price">$289.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🎩</div>
+                    <h4>Sombrero Clásico</h4>
+                    <p>Sombrero de fieltro elegante</p>
+                    <span class="price">$119.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">💼</div>
+                    <h4>Maletín Ejecutivo</h4>
+                    <p>Portafolio de cuero premium</p>
+                    <span class="price">$329.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Niños -->
+    <section class="category-section ninos-section">
+        <div class="container">
+            <div class="category-header">
+                <label for="ninos-toggle" class="back-btn">&larr; Volver</label>
+                <h2 class="section-title">COLECCIÓN NIÑOS</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">👕</div>
+                    <h4>Camiseta Colorida</h4>
+                    <p>Camiseta de algodón suave</p>
+                    <span class="price">$45.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👖</div>
+                    <h4>Jeans Infantiles</h4>
+                    <p>Pantalón vaquero resistente</p>
+                    <span class="price">$79.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👗</div>
+                    <h4>Vestido de Fiesta</h4>
+                    <p>Vestido para ocasiones especiales</p>
+                    <span class="price">$99.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👟</div>
+                    <h4>Zapatillas Deportivas</h4>
+                    <p>Zapatos cómodos y modernos</p>
+                    <span class="price">$129.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧥</div>
+                    <h4>Chaqueta Abrigada</h4>
+                    <p>Chaqueta para clima frío</p>
+                    <span class="price">$149.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🎒</div>
+                    <h4>Mochila Escolar</h4>
+                    <p>Mochila resistente y colorida</p>
+                    <span class="price">$69.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Visítanos</h3>
+                    <p><strong>Dirección:</strong><br>
+                    Av. de la Moda 123<br>
+                    Centro Comercial Premium<br>
+                    Local 45-46</p>
+                    
+                    <p><strong>Teléfono:</strong><br>
+                    +57 300 123 4567</p>
+                    
+                    <p><strong>Email:</strong><br>
+                    info@eliteboutique.com</p>
+                    
+                    <p><strong>Horarios:</strong><br>
+                    Lun - Sáb: 10:00 AM - 8:00 PM<br>
+                    Dom: 11:00 AM - 6:00 PM</p>
+                </div>
+                
+                <div class="contact-form fade-in-delay">
+                    <h3>Mensaje Directo</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Tu teléfono">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+            </div>
+            <p>&copy; 2025 Élite Boutique. Todos los derechos reservados.</p>
+            <p>Moda exclusiva para mujeres con estilo distintivo</p>
+        </div>
+    </footer>
+</body>
+</html>
