@@ -1,410 +1,1312 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Rafael - Desarrollador Web | Páginas Web Modernas y Responsive</title>
-    <meta name="description" content="Rafael - Desarrollador web especializado en páginas web modernas, responsive y optimizadas. Servicios de desarrollo web personalizado, diseño responsive y optimización de sitios. Solicita tu cotización gratuita.">
-    <meta name="keywords" content="desarrollador web, páginas web modernas, diseño responsive, desarrollo web personalizado, optimización web, Rafael desarrollador, webdev.rafel, sitios web profesionales">
-    <meta name="author" content="Rafael - WebDev.Rafel">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="language" content="Spanish">
-    <meta name="geo.region" content="CO">
-    <meta name="geo.placename" content="Colombia">
-    
-    <!-- Performance Meta Tags -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Rafael - Desarrollador Web Moderno | WebDev.Rafel">
-    <meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas. Páginas web responsive y optimizadas.">
-    <meta property="og:image" content="https://mis-proyectos-two.vercel.app/webdevrafel-og.jpg">
-    <meta property="og:url" content="https://mis-proyectos-two.vercel.app/">
-    <meta property="og:site_name" content="WebDev.Rafel">
-    <meta property="og:locale" content="es_ES">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rafael - Desarrollador Web Moderno">
-    <meta name="twitter:description" content="Desarrollador web especializado en páginas web modernas, responsive y optimizadas.">
-    <meta name="twitter:image" content="https://mis-proyectos-two.vercel.app/webdevrafel-twitter.jpg">
-    <meta name="twitter:creator" content="@webdevrafel">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://mis-proyectos-two.vercel.app/">
-    
-    <!-- Fonts - Preload for better performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap&subset=latin" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="webdevrafelfavicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="webdevrafelfavicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="webdevrafel-apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Rafael",
-        "alternateName": "WebDev.Rafel",
-        "description": "Desarrollador web especializado en páginas web modernas, responsive y optimizadas",
-        "url": "https://mis-proyectos-two.vercel.app/",
-        "image": "https://mis-proyectos-two.vercel.app/webdevrafel.jpg",
-        "sameAs": [
-            "https://wa.me/573122915287",
-            "https://www.facebook.com/profile.php?id=61579849271013",
-            "https://www.instagram.com/webdev.rafel/"
-        ],
-        "jobTitle": "Desarrollador Web",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "WebDev.Rafel"
-        },
-        "knowsAbout": [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Desarrollo Web Responsive",
-            "Optimización Web",
-            "Diseño Web Moderno"
-        ],
-        "offers": {
-            "@type": "Service",
-            "serviceType": "Desarrollo Web",
-            "description": "Páginas web personalizadas, diseño responsive y moderno, optimización de sitios existentes"
-        }
+/* ==========================================================================
+VARIABLES CSS - Sistema de Colores y Valores
+   ========================================================================== */
+
+   :root {
+    --primary-color: #1a2951;
+    --secondary-color: #2d4a73;
+    --accent-color: #f4a261;
+    --accent-hover: #e76f51;
+    --text-light: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-light: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --shadow-hard: 0 25px 50px rgba(0, 0, 0, 0.25);
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --border-radius: 20px;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
+/* ==========================================================================
+    RESET Y CONFIGURACIÓN BASE
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+    FONDO ANIMADO
+   ========================================================================== */
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   PARTÍCULAS FLOTANTES
+   ========================================================================== */
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: float 20s infinite linear;
+    opacity: 0.6;
+}
+
+.particle-1 { left: 10%; animation-delay: 0s; }
+.particle-2 { left: 20%; animation-delay: 2s; }
+.particle-3 { left: 30%; animation-delay: 4s; }
+.particle-4 { left: 40%; animation-delay: 6s; }
+.particle-5 { left: 50%; animation-delay: 8s; }
+.particle-6 { left: 60%; animation-delay: 10s; }
+.particle-7 { left: 70%; animation-delay: 12s; }
+.particle-8 { left: 80%; animation-delay: 14s; }
+.particle-9 { left: 90%; animation-delay: 16s; }
+
+.particle:nth-child(odd) {
+    background: rgba(244, 162, 97, 0.4);
+    animation-duration: 25s;
+}
+
+.particle:nth-child(3n) {
+    background: rgba(116, 75, 162, 0.4);
+    animation-duration: 30s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
     }
-    </script>
-    
-    <!-- Additional Schema for LocalBusiness -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "WebDev.Rafel",
-        "description": "Desarrollador web en Colombia especializado en sitios web modernos",
-        "telephone": "+573122915287",
-        "email": "webdev.rafel@gmail.com",
-        "url": "https://mis-proyectos-two.vercel.app/",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "CO"
-        },
-        "priceRange": "$$",
-        "serviceArea": {
-            "@type": "Country",
-            "name": "Colombia"
-        }
+    10% {
+        opacity: 1;
     }
-    </script>
-</head>
-<body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link sr-only">Saltar al contenido principal</a>
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   HEADER / NAVEGACIÓN
+   ========================================================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: all var(--transition-normal);
+}
+
+.header:hover {
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: var(--shadow-soft);
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    transition: transform var(--transition-normal);
+}
+
+.header__logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header__nav-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.header__nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-accent);
+    transition: width var(--transition-normal);
+}
+
+.header__nav-item a:hover {
+    color: var(--accent-color);
+}
+
+.header__nav-item a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu */
+.header__open-nav-button {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.header__open-nav-button:hover {
+    color: var(--accent-color);
+}
+
+.header__checkbox {
+    display: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    transition: right var(--transition-normal);
+    z-index: 999;
+    padding: 6rem 2rem 2rem;
+}
+
+.header__checkbox:checked ~ .mobile-nav {
+    right: 0;
+}
+
+.mobile-nav .header__nav-list {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero__content {
+    text-align: center;
+    animation: fadeInUp 1s ease var(--transition-slow);
+}
+
+.hero__title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Buttons en Hero */
+.hero__cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-button, .cta-button-secondary {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.cta-button {
+    background: var(--gradient-accent);
+    color: var(--text-light);
+    box-shadow: var(--shadow-soft);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.cta-button-secondary {
+    background: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--accent-color);
+}
+
+.cta-button-secondary:hover {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+}
+
+.hero__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero__img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: var(--shadow-hard);
+    transition: transform var(--transition-normal);
+}
+
+.hero__img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(0, 242, 254, 0.8);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+
+.services {
+    padding: 4rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.services__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services__title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service__card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.service__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.service__card:hover::before {
+    left: 100%;
+}
+
+.service__card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-color);
+}
+
+.service__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    transition: transform var(--transition-normal);
+}
+
+.service__card:hover .service__icon {
+    transform: scale(1.2);
+}
+
+.service__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.service__description {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Service Features */
+.service__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.service__feature {
+    background: rgba(244, 162, 97, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(244, 162, 97, 0.2);
+}
+
+/* ==========================================================================
+   SKILLS SECTION
+   ========================================================================== */
+
+.skills {
+    padding: 4rem 2rem;
+}
+
+.skills__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill__item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all var(--transition-normal);
+}
+
+.skill__item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-soft);
+}
+
+.skill__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+/* Skills Percentage */
+.skill__percentage {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.skill__bar {
+    background: rgba(255, 255, 255, 0.1);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill__progress {
+    background: var(--gradient-accent);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 2s ease;
+    position: relative;
+}
+
+.skill__progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    animation: shimmer 2s infinite;
+}
+
+.skill__progress--html {
+    width: 100%;
+}
+
+.skill__progress--css {
+    width: 100%;
+}
+
+/* Nuevas barras de progreso */
+.skill__progress--js {
+    width: 85%;
+}
+
+.skill__progress--responsive {
+    width: 95%;
+}
+
+.skill__item:hover .skill__progress {
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ==========================================================================
+    PORTFOLIO SECTION
+   ========================================================================== */
+
+.portfolio {
+    padding: 4rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.portfolio__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio__title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio__project {
+    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-salon{
+    background-image: url(salon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-boutique{
+    background-image: url(img-boutique.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-cell{
+    background-image: url(cell.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-restaurant{
+    background-image: url(restaurante.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-shoes{
+    background-image: url(shoe.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portfolio__project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0.8;
+    transition: opacity var(--transition-normal);
+}
+
+.portfolio__project:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-color);
+}
+
+.portfolio__project:hover::before {
+    opacity: 0.9;
+}
+
+.portfolio__project--featured {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Portfolio Overlay */
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: all var(--transition-normal);
+    z-index: 2;
+}
+
+.portfolio__project:hover .portfolio__overlay {
+    opacity: 1;
+}
+
+.portfolio__project-name {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.portfolio__project-desc {
+    color: var(--text-muted);
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.portfolio__tech {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.portfolio__link {
+    background: var(--gradient-accent);
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+}
+
+.portfolio__link:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Estilos originales para compatibilidad */
+.portfolio__project-name a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.portfolio__project-name a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width var(--transition-normal);
+}
+
+.portfolio__project-name a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+}
+
+.portfolio__project-name a:hover::after {
+    width: 80%;
+}
+
+/* ==========================================================================
+    CONTACT FORM SECTION
+   ========================================================================== */
+
+.form {
+    padding: 4rem 2rem;
+}
+
+.form__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form__title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+}
+
+.form__form {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    display: grid;
+    gap: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.form__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.form__row--full {
+    grid-template-columns: 1fr;
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__label {
+    display: block;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+    font-family: inherit;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(244, 162, 97, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form__submit {
+    background: var(--gradient-accent);
+    border: none;
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.form__submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.form__submit:hover::before {
+    left: 100%;
+}
+
+.form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.form__submit:active {
+    transform: translateY(0);
+}
+
+/* Contact Alternative Info */
+.form__alternative {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.contact__info {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact__info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contact__info a:hover {
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+    WHATSAPP BUTTON
+   ========================================================================== */
+
+.whatsapp-btn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25d366;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-soft);
+    z-index: 1000;
+    animation: pulse 3s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+    background: #20b358;
+    animation: none;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+@keyframes pulse {
+    0%, 70%, 100% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1.05);
+    }
+}
+
+/* ==========================================================================
+    FOOTER
+   ========================================================================== */
+
+.footer {
+    background: var(--bg-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+
+.footer__content p {
+    margin-bottom: 1rem;
+}
+
+/* Footer improvements */
+.footer__main, .footer__contact, .footer__legal, .footer__social {
+    margin-bottom: 1rem;
+}
+
+.footer__legal a, .footer__social a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer__legal a:hover, .footer__social a:hover {
+    color: var(--accent-color);
+}
+
+.footer__divider {
+    width: 50%;
+    margin: 2rem auto;
+    border: none;
+    height: 1px;
+    background: var(--glass-border);
+}
+
+/* ==========================================================================
+    SCROLL TO TOP BUTTON
+   ========================================================================== */
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-accent);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-soft);
+    z-index: 999;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ==========================================================================
+    RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (min-width: 768px) {
+    .header__nav {
+        display: block;
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .hero__content {
+        text-align: left;
+    }
+
+    .hero__description {
+        margin-left: 0;
+    }
+
+    .hero__cta {
+        justify-content: flex-start;
+    }
+
+    .form__row:not(.form__row--full) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .whatsapp-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .portfolio__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio__project--featured {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__cta {
+        justify-content: center;
+    }
     
-    <!-- Animated Background -->
-    <div class="animated-bg" aria-hidden="true"></div>
-    
-    <!-- Floating Particles -->
-    <div class="particles" aria-hidden="true">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
-        <div class="particle particle-4"></div>
-        <div class="particle particle-5"></div>
-        <div class="particle particle-6"></div>
-        <div class="particle particle-7"></div>
-        <div class="particle particle-8"></div>
-        <div class="particle particle-9"></div>
-    </div>
+    .cta-button, .cta-button-secondary {
+        min-width: 150px;
+        padding: 0.8rem 1.5rem;
+    }
 
-    <header class="header" role="banner">
-        <input type="checkbox" class="header__checkbox sr-only" id="open-menu" aria-label="Abrir menú de navegación">
-        <div class="header__logo-container">
-            <img class="header__logo" src="webdevrafel.png" alt="WebDev.Rafel - Logo de Rafael Desarrollador Web" width="50" height="50">
-        </div>
-        <nav class="header__nav" role="navigation" aria-label="Navegación principal">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
-                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
-                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
-                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <label for="open-menu" class="header__open-nav-button" aria-label="Abrir menú de navegación">☰</label>
-        <div class="mobile-nav" role="navigation" aria-label="Navegación móvil">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
-                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
-                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
-                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </header>
+    .services,
+    .skills,
+    .portfolio,
+    .form {
+        padding: 3rem 1rem;
+    }
 
-    <main id="main-content" role="main">
-        <section class="hero" id="hero" aria-labelledby="hero-title">
-            <div class="hero__container">
-                <div class="hero__content">
-                    <h1 id="hero-title" class="hero__title">WEBDEV.RAFEL</h1>
-                    <h2 class="hero__subtitle">Desarrollador Web Moderno en Colombia</h2>
-                    <p class="hero__description">
-                        WebDev.Rafel es mi marca personal. Un espacio donde muestro mi pasión, mi creatividad y mi visión en el mundo del desarrollo web. Aquí encontrarás proyectos que reflejan mi estilo, dedicación y enfoque en construir experiencias digitales modernas, prácticas y visualmente atractivas.
-                        <br><br>
-                        Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia. Especializado en crear páginas web que no solo se ven increíbles, sino que también funcionan perfectamente.
-                    </p>
-                    <div class="hero__cta">
-                        <a href="#form" class="cta-button" aria-label="Solicitar cotización de desarrollo web">Solicita tu Cotización</a>
-                        <a href="#portfolio" class="cta-button-secondary" aria-label="Ver proyectos realizados">Ver Proyectos</a>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <img src="webdevrafel.png" alt="Rafael - Desarrollador Web Profesional especializado en páginas web modernas y responsive" class="hero__img" width="300" height="300" loading="eager">
-                </div>
-            </div>
-        </section>
+    .services__title,
+    .skills__title,
+    .portfolio__title,
+    .form__title {
+        font-size: 2rem;
+    }
 
-        <section class="services" id="services" aria-labelledby="services-title">
-            <div class="services__container">
-                <h2 id="services-title" class="services__title">💼 Mis Servicios de Desarrollo Web</h2>
-                <div class="services__grid">
-                    <article class="service__card">
-                        <div class="service__icon" aria-hidden="true">🌐</div>
-                        <h3 class="service__title">Páginas Web Personalizadas</h3>
-                        <p class="service__description">Desarrollo sitios web únicos y adaptados a tus necesidades específicas, con diseño moderno y funcionalidad optimizada. Cada proyecto es creado desde cero para reflejar la identidad de tu marca.</p>
-                        <div class="service__features">
-                            <span class="service__feature">Diseño personalizado</span>
-                            <span class="service__feature">SEO optimizado</span>
-                            <span class="service__feature">Tiempo: 1-2 semanas</span>
-                        </div>
-                    </article>
-                    <article class="service__card">
-                        <div class="service__icon" aria-hidden="true">📱</div>
-                        <h3 class="service__title">Diseño Responsive y Moderno</h3>
-                        <p class="service__description">Creo experiencias que se adaptan perfectamente a todos los dispositivos: móvil, tablet y desktop. Garantizo una navegación fluida y una experiencia de usuario excepcional en cualquier pantalla.</p>
-                        <div class="service__features">
-                            <span class="service__feature">Mobile First</span>
-                            <span class="service__feature">UX/UI optimizado</span>
-                            <span class="service__feature">Tiempo: 3-5 días</span>
-                        </div>
-                    </article>
-                    <article class="service__card">
-                        <div class="service__icon" aria-hidden="true">⚡</div>
-                        <h3 class="service__title">Optimización de Sitios Web</h3>
-                        <p class="service__description">Mejoro el rendimiento y la velocidad de sitios web existentes. Optimizo código, imágenes y estructuras para mejorar el posicionamiento SEO y la experiencia del usuario.</p>
-                        <div class="service__features">
-                            <span class="service__feature">Velocidad mejorada</span>
-                            <span class="service__feature">SEO técnico</span>
-                            <span class="service__feature">Tiempo: 1 semana</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+    .form__form {
+        padding: 2rem;
+    }
 
-        <section class="skills" aria-labelledby="skills-title">
-            <div class="skills__container">
-                <h2 id="skills-title" class="skills__title">💪 Mis Habilidades Técnicas</h2>
-                <div class="skills__grid">
-                    <article class="skill__item">
-                        <div class="skill__name">HTML5</div>
-                        <div class="skill__percentage">100%</div>
-                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 100% de conocimiento">
-                            <div class="skill__progress skill__progress--html"></div>
-                        </div>
-                    </article>
-                    <article class="skill__item">
-                        <div class="skill__name">CSS3</div>
-                        <div class="skill__percentage">100%</div>
-                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 y Frameworks: 100% de conocimiento">
-                            <div class="skill__progress skill__progress--css"></div>
-                        </div>
-                    </article>
-                    <article class="skill__item">
-                        <div class="skill__name">JavaScript</div>
-                        <div class="skill__percentage">85%</div>
-                        <div class="skill__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 85% de conocimiento">
-                            <div class="skill__progress skill__progress--js"></div>
-                        </div>
-                    </article>
-                    <article class="skill__item">
-                        <div class="skill__name">Responsive Design</div>
-                        <div class="skill__percentage">95%</div>
-                        <div class="skill__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design: 95% de conocimiento">
-                            <div class="skill__progress skill__progress--responsive"></div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+    .contact__info {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-        <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
-            <div class="portfolio__container">
-                <h2 id="portfolio-title" class="portfolio__title">🚀 Mi Portafolio - Proyectos Destacados</h2>
-                <div class="portfolio__grid">
-                    <article class="portfolio__project portfolio__project--featured img-salon">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__project-name">Salón de Belleza Elegance</h3>
-                            <p class="portfolio__project-desc">Sitio web moderno con galería de servicios y información de contacto</p>
-                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
-                            <a href="salon-de-belleza/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Salón de Belleza (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
-                        </div>
-                    </article>
-                    <article class="portfolio__project img-boutique">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__project-name">Boutique Fashion</h3>
-                            <p class="portfolio__project-desc">E-commerce moderno con catálogo de productos y diseño elegante</p>
-                            <div class="portfolio__tech">HTML5 • CSS3 • JavaScript</div>
-                            <a href="boutique/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Boutique (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
-                        </div>
-                    </article>
-                    <article class="portfolio__project img-cell">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__project-name">Store Cell Tech</h3>
-                            <p class="portfolio__project-desc">Tienda online de celulares con catálogo interactivo</p>
-                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
-                            <a href="store-cell/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Celulares (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
-                        </div>
-                    </article>
-                    <article class="portfolio__project img-restaurant">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__project-name">Restaurant Delicious</h3>
-                            <p class="portfolio__project-desc">Página web para restaurante con menú digital y reservas</p>
-                            <div class="portfolio__tech">HTML5 • CSS3 • UX/UI</div>
-                            <a href="restaurant/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Restaurante (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
-                        </div>
-                    </article>
-                    <article class="portfolio__project img-shoes">
-                        <div class="portfolio__overlay">
-                            <h3 class="portfolio__project-name">Store Shoes Fashion</h3>
-                            <p class="portfolio__project-desc">Tienda online de zapatos con diseño moderno y funcional</p>
-                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
-                            <a href="store-shoes/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+    .whatsapp-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
 
-        <section class="form" id="form" aria-labelledby="contact-title">
-            <div class="form__container">
-                <h2 id="contact-title" class="form__title">📬 Contacto - Solicita tu Cotización u Información</h2>
-                <form class="form__form" action="https://formspree.io/f/mjkekdqz" method="POST" aria-label="Formulario de contacto">
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label class="form__label" for="firstName">Nombre*</label>
-                            <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Tu nombre" required aria-required="true" autocomplete="given-name">
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label" for="lastName">Apellido*</label>
-                            <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Tu apellido" required aria-required="true" autocomplete="family-name">
-                        </div>
-                    </div>
-                    <div class="form__row form__row--full">
-                        <div class="form__group">
-                            <label class="form__label" for="email">Correo Electrónico*</label>
-                            <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required aria-required="true" autocomplete="email">
-                        </div>
-                    </div>
-                    <div class="form__row form__row--full">
-                        <div class="form__group">
-                            <label class="form__label" for="phone">Teléfono (opcional)</label>
-                            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+57 300 123 4567" autocomplete="tel">
-                        </div>
-                    </div>
-                    <div class="form__row form__row--full">
-                        <div class="form__group">
-                            <label class="form__label" for="message">Cuéntame sobre tu proyecto*</label>
-                            <textarea class="form__textarea" id="message" name="message" placeholder="Describe tu proyecto: tipo de sitio web, funcionalidades que necesitas, presupuesto aproximado, etc." required aria-required="true"></textarea>
-                        </div>
-                    </div>
-                    <div class="form__row form__row--full">
-                        <button class="form__submit" type="submit">Enviar Mensaje y Solicitar Cotización</button>
-                    </div>
-                </form>
-                <div class="form__alternative">
-                    <p>También puedes contactarme directamente:</p>
-                    <div class="contact__info">
-                        <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email">📧 webdev.rafel@gmail.com</a>
-                        <a href="https://wa.me/573122915287" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">📱 WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    .whatsapp-btn span {
+        display: none;
+    }
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/573122915287?text=Hola,%20estoy%20interesado%20en%20tus%20servicios.%20Me%20gustaría%20recibir%20más%20información." 
-       class="whatsapp-btn" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
-        Contactame por WhatsApp
-    </a>
+    .scroll-to-top {
+        bottom: 6rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
 
-    <footer class="footer" role="contentinfo">
-        <div class="footer__content">
-            <div class="footer__main">
-                <p>© 2025 Rafael - WebDev.Rafel. Todos los derechos reservados.</p>
-                <p>Desarrollador Web en Colombia | Especialista en Páginas Web Modernas y Responsive</p>
-            </div>
-            <div class="footer__contact">
-                <p>Contacto: <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email a webdev.rafel@gmail.com">webdev.rafel@gmail.com</a></p>
-            </div>
-            <div class="footer__legal">
-                <a href="#privacy" aria-label="Ver política de privacidad">Política de Privacidad</a> | 
-                <a href="#terms" aria-label="Ver términos de uso">Términos de Uso</a>
-            </div>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=61579849271013" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Facebook">Facebook</a> | 
-                <a href="https://www.instagram.com/webdev.rafel/" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Instagram">Instagram</a>
-            </div>
-            <hr class="footer__divider">
-        </div>
-    </footer>
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 2rem;
+    }
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Ir al inicio de la página" style="display: none;">
-        ↑
-    </button>
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
 
-    <!-- Basic JavaScript for scroll to top -->
-    <script>
-        // Scroll to top functionality
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Form submission feedback
-        const form = document.querySelector('.form__form');
-        form.addEventListener('submit', function() {
-            const submitBtn = form.querySelector('.form__submit');
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-        });
-    </script>
-</body>
-</html>
+    .services__grid,
+    .portfolio__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service__card,
+    .skill__item {
+        padding: 1.5rem;
+    }
+
+    .form__form {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+    CUSTOM SCROLLBAR
+   ========================================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+/* ==========================================================================
+    UTILIDADES Y ESTADOS ADICIONALES
+   ========================================================================== */
+
+/* Animaciones de aparición para elementos */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-slow);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estados de loading */
+.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Efectos adicionales para mejorar la interacción */
+.header__nav-item a:active,
+.portfolio__project-name a:active,
+.whatsapp-btn:active {
+    transform: scale(0.98);
+}
+
+/* Mejora la accesibilidad con focus visible */
+.header__nav-item a:focus-visible,
+.form__input:focus-visible,
+.form__textarea:focus-visible,
+.form__submit:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Ocultar elementos de forma accesible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
