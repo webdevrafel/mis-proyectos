@@ -1,151 +1,281 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Rafael - Desarrollador web especializado en páginas web modernas, responsive y optimizadas. Servicios de desarrollo web personalizado y diseño responsive.">
-        <meta property="og:title" content="WebDev.Rafel - Desarrollador Web Moderno">
-        <meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas.">
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="webdevrafelfavicon.png" type="image/x-icon">
-        <title>Desarrollador Web | Páginas Web Modernas y Responsive</title>
-    </head>
-    <body>
-        <header class="header">
-            <input type="checkbox" class="header__checkbox" id="open-menu">
-            <label for="open-menu" class="header__open-nav-button" role="button">=</label>
-            <div class="header__logo-container">
-                <img class="hader__logo" src="webdevrafel.png">
-            </div>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#profile">Acerca de mí</a></li>
-                    <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
-                    <li class="header__nav-item"><a href="#form">Contactame</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="profile" id="profile">
-            <div class="profile__wrapper">
-                <div class="profiel__img-container">
-                    <img src="webdevrafel.png" class="profile__img">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rafael - Desarrollador Web | Páginas Web Modernas y Responsive</title>
+    <meta name="description" content="Rafael - Desarrollador web especializado en páginas web modernas, responsive y optimizadas. Servicios de desarrollo web personalizado, diseño responsive y optimización de sitios. Solicita tu cotización gratuita.">
+    <meta name="keywords" content="desarrollador web, páginas web modernas, diseño responsive, desarrollo web personalizado, optimización web, Rafael desarrollador, webdev.rafel, sitios web profesionales">
+    <meta name="author" content="Rafael - WebDev.Rafel">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="CO">
+    <meta name="geo.placename" content="Colombia">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rafael - Desarrollador Web Moderno | WebDev.Rafel">
+    <meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas. Páginas web responsive y optimizadas.">
+    <meta property="og:image" content="https://tudominio.com/webdevrafel-og.jpg">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:site_name" content="WebDev.Rafel">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rafael - Desarrollador Web Moderno">
+    <meta name="twitter:description" content="Desarrollador web especializado en páginas web modernas, responsive y optimizadas.">
+    <meta name="twitter:image" content="https://tudominio.com/webdevrafel-twitter.jpg">
+    <meta name="twitter:creator" content="@webdevrafel">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tudominio.com">
+    
+    <!-- Fonts - Preload for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="webdevrafelfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="webdevrafelfavicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="webdevrafel-apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rafael",
+        "alternateName": "WebDev.Rafel",
+        "description": "Desarrollador web especializado en páginas web modernas, responsive y optimizadas",
+        "url": "https://tudominio.com",
+        "image": "https://tudominio.com/webdevrafel.jpg",
+        "sameAs": [
+            "https://wa.me/573122915287"
+        ],
+        "jobTitle": "Desarrollador Web",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "WebDev.Rafel"
+        },
+        "knowsAbout": [
+            "HTML5",
+            "CSS3",
+            "Desarrollo Web Responsive",
+            "Optimización Web",
+            "Diseño Web Moderno"
+        ],
+        "offers": {
+            "@type": "Service",
+            "serviceType": "Desarrollo Web",
+            "description": "Páginas web personalizadas, diseño responsive y moderno, optimización de sitios existentes"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link sr-only">Saltar al contenido principal</a>
+    
+    <!-- Animated Background -->
+    <div class="animated-bg" aria-hidden="true"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles" aria-hidden="true">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+        <div class="particle particle-7"></div>
+        <div class="particle particle-8"></div>
+        <div class="particle particle-9"></div>
+    </div>
+
+    <header class="header" role="banner">
+        <input type="checkbox" class="header__checkbox sr-only" id="open-menu" aria-label="Abrir menú de navegación">
+        <div class="header__logo-container">
+            <img class="header__logo" src="webdevrafel.png" alt="WebDev.Rafel - Logo de Rafael Desarrollador Web" width="50" height="50">
+        </div>
+        <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
+                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
+                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
+                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <label for="open-menu" class="header__open-nav-button" aria-label="Abrir menú de navegación">☰</label>
+        <div class="mobile-nav" role="navigation" aria-label="Navegación móvil">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
+                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
+                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
+                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">WEBDEV.RAFEL</h1>
+                    <h2 class="hero__subtitle">Desarrollador Web Moderno en Colombia</h2>
+                    <p class="hero__description">
+                        WebDev.Rafel es mi marca personal. Un espacio donde muestro mi pasión, mi creatividad y mi visión en el mundo del desarrollo web. Aquí encontrarás proyectos que reflejan mi estilo, dedicación y enfoque en construir experiencias digitales modernas, prácticas y visualmente atractivas.
+                        <br><br>
+                        Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia. Especializado en crear páginas web que no solo se ven increíbles, sino que también funcionan perfectamente.
+                    </p>
                 </div>
-                <div class="profile__data-container">
-                    <div class="profile__data">
-                        <div class="profile__description">
-                            <h1>WEBDEV.RAFEL</h1>
-                            <p>
-                                <h2 class="sbm">¿Qué es webdevrafel</h2>
-                                WebDev.Rafel es mi marca personal. Un espacio donde muestro mi pasión, mi creatividad y mi visión en el mundo del desarrollo web. Aquí encontrarás proyectos que reflejan mi estilo, dedicación y enfoque en construir experiencias digitales modernas, prácticas y visualmente atractivas.
-                                <br>
-                                
-                                Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia.
-                            
-                                <br>
-                                <br>
-                                💼 Servicios
-                                <br>
-                                <br>
-                                <ul>
-                                    <li class="servicios">Páginas web personalizadas</li>
-                                    <li class="servicios">  Diseño responsive y moderno</li>
-                                    <li class="servicios">       Optimización de sitios existentes</li>
-                                </ul>
-                                
-                            </p>
+                <div class="hero__image">
+                    <img src="webdevrafel.png" alt="Rafael - Desarrollador Web Profesional especializado en páginas web modernas y responsive" class="hero__img" width="300" height="300">
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="services__container">
+                <h2 id="services-title" class="services__title">💼 Mis Servicios de Desarrollo Web</h2>
+                <div class="services__grid">
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">🌐</div>
+                        <h3 class="service__title">Páginas Web Personalizadas</h3>
+                        <p class="service__description">Desarrollo sitios web únicos y adaptados a tus necesidades específicas, con diseño moderno y funcionalidad optimizada. Cada proyecto es creado desde cero para reflejar la identidad de tu marca.</p>
+                    </article>
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">📱</div>
+                        <h3 class="service__title">Diseño Responsive y Moderno</h3>
+                        <p class="service__description">Creo experiencias que se adaptan perfectamente a todos los dispositivos: móvil, tablet y desktop. Garantizo una navegación fluida y una experiencia de usuario excepcional en cualquier pantalla.</p>
+                    </article>
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">⚡</div>
+                        <h3 class="service__title">Optimización de Sitios Web</h3>
+                        <p class="service__description">Mejoro el rendimiento y la velocidad de sitios web existentes. Optimizo código, imágenes y estructuras para mejorar el posicionamiento SEO y la experiencia del usuario.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" aria-labelledby="skills-title">
+            <div class="skills__container">
+                <h2 id="skills-title" class="skills__title">💪 Mis Habilidades Técnicas</h2>
+                <div class="skills__grid">
+                    <article class="skill__item">
+                        <div class="skill__name">HTML5</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 100% de conocimiento">
+                            <div class="skill__progress skill__progress--html"></div>
                         </div>
-                        <div class="profiel__skills-container">
-                            <h2>HABILIDADES</h2>
-                            <ul>
-                                <li class="profile__skill">
-                                    <div class="load-bar">
-                                        <div class="load-bar__bar bar--100">100%</div>
-                                    </div>
-                                    <span class="profile__skill-name">HTML</span>
-                                </li>
-                                <li class="profile__skill">
-                                    <div class="load-bar">
-                                        <div class="load-bar__bar bar--100">100%</div>
-                                    </div>
-                                    <span class="profile__skill-name">CSS</span>
-                                </li>
-                            </ul>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">CSS3</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 y Frameworks: 100% de conocimiento">
+                            <div class="skill__progress skill__progress--css"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+            <div class="portfolio__container">
+                <h2 id="portfolio-title" class="portfolio__title">🚀 Mi Portafolio - Proyectos Destacados</h2>
+                <div class="portfolio__grid">
+                    <article class="portfolio__project portfolio__project--featured">
+                        <h3 class="portfolio__project-name">
+                            <a href="salon-de-belleza/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Salón de Belleza (se abre en nueva ventana)">SALON DE BELLEZA</a>
+                        </h3>
+                    </article>
+                    <article class="portfolio__project">
+                        <h3 class="portfolio__project-name">
+                            <a href="boutique/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Boutique (se abre en nueva ventana)">BOUTIQUE</a>
+                        </h3>
+                    </article>
+                    <article class="portfolio__project">
+                        <h3 class="portfolio__project-name">
+                            <a href="store-cell/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Celulares (se abre en nueva ventana)">STORE CELL</a>
+                        </h3>
+                    </article>
+                    <article class="portfolio__project">
+                        <h3 class="portfolio__project-name">
+                            <a href="restaurant/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Restaurante (se abre en nueva ventana)">RESTAURANT PAGE</a>
+                        </h3>
+                    </article>
+                    <article class="portfolio__project">
+                        <h3 class="portfolio__project-name">
+                            <a href="store-shoes/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)">STORE SHOES</a>
+                        </h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="form" id="form" aria-labelledby="contact-title">
+            <div class="form__container">
+                <h2 id="contact-title" class="form__title">📬 Contacto - Solicita tu Cotización</h2>
+                <form class="form__form" action="https://formspree.io/f/mjkekdqz" method="POST" aria-label="Formulario de contacto">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label class="form__label" for="firstName">Nombre*</label>
+                            <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Tu nombre" required aria-required="true">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="lastName">Apellido*</label>
+                            <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Tu apellido" required aria-required="true">
                         </div>
                     </div>
-                </div>
-            </div>
-        </main>
-        <section class="portfolio" id="portfolio">
-            <h2 class="portfolio__title"> SECCIÓN DE PORTAFOLIO
-                                            (MIS PROYECTOS)
-            </h2>
-            <div class="portfolio__project-container">
-                <div class="portfolio__project">
-                    
-                    <h2 class="portfolio__project-name"><a href="salon-de-belleza/index.html" target="_blank">SALON DE BELLEZA</a></h2>
-                </div>
-                <div class="portfolio__project">
-                    
-                    <h2 class="portfolio__project-name"><a href="boutique/index.html" target="_blank">BOUTIQUE</a></h2>
-                </div>
-                <div class="portfolio__project">
-                    <h2 class="portfolio__project-name"><a href="store-cell/index.html" target="_blank">STORE CELL</a></h2>
-                </div>
-                <div class="portfolio__project">
-                    <h2 class="portfolio__project-name"><a href="restaurant/index.html" target="_blank">RESTAURANT PAGE</a></h2>
-                </div>
-                <div class="portfolio__project">
-                    <h2 class="portfolio__project-name"><a href="store-shoes/index.html" target="_blank">STORE SHOES</a></h2>
-                </div>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="email">Correo Electrónico*</label>
+                            <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="message">Cuéntame sobre tu proyecto*</label>
+                            <textarea class="form__textarea" id="message" name="message" placeholder="Describe tu proyecto: tipo de sitio web, funcionalidades que necesitas, presupuesto aproximado, etc." required aria-required="true"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__row form__row--full">
+                        <button class="form__submit" type="submit">Enviar Mensaje y Solicitar Cotización ✨</button>
+                    </div>
+                </form>
             </div>
         </section>
-        <section class="form" id="form">
-            <h2 class="form__title">CONTACTO</h2>
-            <form class="form__form" action="https://formspree.io/f/mjkekdqz" method="POST">
+    </main>
 
-                <div class="form__input-container">
-                <label> Nombre
-                    <input type="text" name="firstName" placeholder="Jhon" required>
-                </label>
-                </div>
-            
-                <div class="form__input-container">
-                <label> Apellido
-                    <input type="text" name="lastName" placeholder="Doe" required>
-                </label>
-                </div>
-            
-                <div class="form__input-container">
-                <label> E-mail
-                    <input type="email" name="email" placeholder="mail@example.com" required>
-                </label>
-                </div>
-            
-                <div class="form__input-container">
-                <label> Mensaje
-                    <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
-                </label>
-                </div>
-            
-                <div class="form__input-container">
-                <input type="submit" value="Enviar">
-                </div>
-            </form>
-            
-        </section>
+    <a href="https://wa.me/573122915287?text=Hola,%20estoy%20interesado%20en%20tus%20servicios.%20Me%20gustaría%20recibir%20más%20información." 
+    class="whatsapp-btn" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
+    Contactar por WhatsApp
+</a>
 
-        <a href="https://wa.me/573122915287?text=Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20Bella%20Nails%20%26%20Beauty" class="whatsapp-btn" target="_blank">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103"/>
-            </svg>
-            Contactame
-        </a>
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.103"/>
+        </svg>
+        <span>Cotización WhatsApp</span>
+    </a>
 
-
-        <footer>
-            © 2025 [by webdevrafel]. Todos los derechos reservados.
-            Contacto: webdev.rafel@gmail.com |
-            Política de Privacidad | Términos de Uso | Cookies <hr>
-        </footer>
-    </body>
-    </html>
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <p>© 2025 Rafael - WebDev.Rafel. Todos los derechos reservados.</p>
+            <p>Desarrollador Web en Colombia | Especialista en Páginas Web Modernas y Responsive</p>
+            <p>Contacto: <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email a webdev.rafel@gmail.com">webdev.rafel@gmail.com</a> | 
+            <a href="#" aria-label="Leer política de privacidad">Política de Privacidad</a> | 
+            <a href="#" aria-label="Leer términos de uso">Términos de Uso</a></p>
+            <hr class="footer__divider">
+        </div>
+    </footer>
+</body>
+</html>
