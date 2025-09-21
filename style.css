@@ -1,8 +1,8 @@
 /* ==========================================================================
-   VARIABLES CSS - Sistema de Colores y Valores
+VARIABLES CSS - Sistema de Colores y Valores
    ========================================================================== */
 
-   :root {
+    :root {
     --primary-color: #1a2951;
     --secondary-color: #2d4a73;
     --accent-color: #f4a261;
@@ -28,7 +28,7 @@
 }
 
 /* ==========================================================================
-   RESET Y CONFIGURACIÓN BASE
+    RESET Y CONFIGURACIÓN BASE
    ========================================================================== */
 
 * {
@@ -51,7 +51,7 @@ body {
 }
 
 /* ==========================================================================
-   FONDO ANIMADO
+    FONDO ANIMADO
    ========================================================================== */
 
 .animated-bg {
@@ -541,7 +541,7 @@ body {
 }
 
 /* ==========================================================================
-   PORTFOLIO SECTION
+    PORTFOLIO SECTION
    ========================================================================== */
 
 .portfolio {
@@ -580,6 +580,39 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.img-salon{
+    background-image: url(salon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.img-boutique{
+    background-image: url(img-boutique.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.img-cell{
+    background-image: url(cell.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.img-restaurant{
+    background-image: url(restaurante.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.img-shoes{
+    background-image: url(shoe.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+    
 }
 
 .portfolio__project::before {
@@ -647,7 +680,7 @@ body {
 }
 
 /* ==========================================================================
-   CONTACT FORM SECTION
+    CONTACT FORM SECTION
    ========================================================================== */
 
 .form {
@@ -771,7 +804,7 @@ body {
 }
 
 /* ==========================================================================
-   WHATSAPP BUTTON
+    WHATSAPP BUTTON
    ========================================================================== */
 
 .whatsapp-btn {
@@ -816,7 +849,7 @@ body {
 }
 
 /* ==========================================================================
-   FOOTER
+    FOOTER
    ========================================================================== */
 
 .footer {
@@ -845,7 +878,7 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+    RESPONSIVE DESIGN
    ========================================================================== */
 
 @media (min-width: 768px) {
@@ -964,7 +997,7 @@ body {
 }
 
 /* ==========================================================================
-   CUSTOM SCROLLBAR
+    CUSTOM SCROLLBAR
    ========================================================================== */
 
 ::-webkit-scrollbar {
@@ -985,7 +1018,7 @@ body {
 }
 
 /* ==========================================================================
-   UTILIDADES Y ESTADOS ADICIONALES
+    UTILIDADES Y ESTADOS ADICIONALES
    ========================================================================== */
 
 /* Animaciones de aparición para elementos */
