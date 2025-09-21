@@ -15,12 +15,17 @@
     <meta name="geo.region" content="CO">
     <meta name="geo.placename" content="Colombia">
     
+    <!-- Performance Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rafael - Desarrollador Web Moderno | WebDev.Rafel">
     <meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas. Páginas web responsive y optimizadas.">
-    <meta property="og:image" content="https://tudominio.com/webdevrafel-og.jpg">
-    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:image" content="https://mis-proyectos-two.vercel.app/webdevrafel-og.jpg">
+    <meta property="og:url" content="https://mis-proyectos-two.vercel.app/">
     <meta property="og:site_name" content="WebDev.Rafel">
     <meta property="og:locale" content="es_ES">
     
@@ -28,16 +33,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rafael - Desarrollador Web Moderno">
     <meta name="twitter:description" content="Desarrollador web especializado en páginas web modernas, responsive y optimizadas.">
-    <meta name="twitter:image" content="https://tudominio.com/webdevrafel-twitter.jpg">
+    <meta name="twitter:image" content="https://mis-proyectos-two.vercel.app/webdevrafel-twitter.jpg">
     <meta name="twitter:creator" content="@webdevrafel">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tudominio.com">
+    <link rel="canonical" href="https://mis-proyectos-two.vercel.app/">
     
     <!-- Fonts - Preload for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap&subset=latin" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="webdevrafelfavicon-32x32.png">
@@ -56,10 +61,12 @@
         "name": "Rafael",
         "alternateName": "WebDev.Rafel",
         "description": "Desarrollador web especializado en páginas web modernas, responsive y optimizadas",
-        "url": "https://tudominio.com",
-        "image": "https://tudominio.com/webdevrafel.jpg",
+        "url": "https://mis-proyectos-two.vercel.app/",
+        "image": "https://mis-proyectos-two.vercel.app/webdevrafel.jpg",
         "sameAs": [
-            "https://wa.me/573122915287"
+            "https://wa.me/573122915287",
+            "https://www.facebook.com/profile.php?id=61579849271013",
+            "https://www.instagram.com/webdev.rafel/"
         ],
         "jobTitle": "Desarrollador Web",
         "worksFor": {
@@ -69,6 +76,7 @@
         "knowsAbout": [
             "HTML5",
             "CSS3",
+            "JavaScript",
             "Desarrollo Web Responsive",
             "Optimización Web",
             "Diseño Web Moderno"
@@ -77,6 +85,28 @@
             "@type": "Service",
             "serviceType": "Desarrollo Web",
             "description": "Páginas web personalizadas, diseño responsive y moderno, optimización de sitios existentes"
+        }
+    }
+    </script>
+    
+    <!-- Additional Schema for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "WebDev.Rafel",
+        "description": "Desarrollador web en Colombia especializado en sitios web modernos",
+        "telephone": "+573122915287",
+        "email": "webdev.rafel@gmail.com",
+        "url": "https://mis-proyectos-two.vercel.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CO"
+        },
+        "priceRange": "$$",
+        "serviceArea": {
+            "@type": "Country",
+            "name": "Colombia"
         }
     }
     </script>
@@ -136,9 +166,13 @@
                         <br><br>
                         Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia. Especializado en crear páginas web que no solo se ven increíbles, sino que también funcionan perfectamente.
                     </p>
+                    <div class="hero__cta">
+                        <a href="#form" class="cta-button" aria-label="Solicitar cotización de desarrollo web">Solicita tu Cotización</a>
+                        <a href="#portfolio" class="cta-button-secondary" aria-label="Ver proyectos realizados">Ver Proyectos</a>
+                    </div>
                 </div>
                 <div class="hero__image">
-                    <img src="webdevrafel.png" alt="Rafael - Desarrollador Web Profesional especializado en páginas web modernas y responsive" class="hero__img" width="300" height="300">
+                    <img src="webdevrafel.png" alt="Rafael - Desarrollador Web Profesional especializado en páginas web modernas y responsive" class="hero__img" width="300" height="300" loading="eager">
                 </div>
             </div>
         </section>
@@ -151,16 +185,31 @@
                         <div class="service__icon" aria-hidden="true">🌐</div>
                         <h3 class="service__title">Páginas Web Personalizadas</h3>
                         <p class="service__description">Desarrollo sitios web únicos y adaptados a tus necesidades específicas, con diseño moderno y funcionalidad optimizada. Cada proyecto es creado desde cero para reflejar la identidad de tu marca.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Diseño personalizado</span>
+                            <span class="service__feature">SEO optimizado</span>
+                            <span class="service__feature">Tiempo: 1-2 semanas</span>
+                        </div>
                     </article>
                     <article class="service__card">
                         <div class="service__icon" aria-hidden="true">📱</div>
                         <h3 class="service__title">Diseño Responsive y Moderno</h3>
                         <p class="service__description">Creo experiencias que se adaptan perfectamente a todos los dispositivos: móvil, tablet y desktop. Garantizo una navegación fluida y una experiencia de usuario excepcional en cualquier pantalla.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Mobile First</span>
+                            <span class="service__feature">UX/UI optimizado</span>
+                            <span class="service__feature">Tiempo: 3-5 días</span>
+                        </div>
                     </article>
                     <article class="service__card">
                         <div class="service__icon" aria-hidden="true">⚡</div>
                         <h3 class="service__title">Optimización de Sitios Web</h3>
                         <p class="service__description">Mejoro el rendimiento y la velocidad de sitios web existentes. Optimizo código, imágenes y estructuras para mejorar el posicionamiento SEO y la experiencia del usuario.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Velocidad mejorada</span>
+                            <span class="service__feature">SEO técnico</span>
+                            <span class="service__feature">Tiempo: 1 semana</span>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -172,16 +221,30 @@
                 <div class="skills__grid">
                     <article class="skill__item">
                         <div class="skill__name">HTML5</div>
-                        <p>100%</p>
+                        <div class="skill__percentage">100%</div>
                         <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 100% de conocimiento">
                             <div class="skill__progress skill__progress--html"></div>
                         </div>
                     </article>
                     <article class="skill__item">
                         <div class="skill__name">CSS3</div>
-                        <p>100%</p>
+                        <div class="skill__percentage">100%</div>
                         <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 y Frameworks: 100% de conocimiento">
                             <div class="skill__progress skill__progress--css"></div>
+                        </div>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">JavaScript</div>
+                        <div class="skill__percentage">85%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 85% de conocimiento">
+                            <div class="skill__progress skill__progress--js"></div>
+                        </div>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">Responsive Design</div>
+                        <div class="skill__percentage">95%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design: 95% de conocimiento">
+                            <div class="skill__progress skill__progress--responsive"></div>
                         </div>
                     </article>
                 </div>
@@ -191,31 +254,46 @@
         <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
             <div class="portfolio__container">
                 <h2 id="portfolio-title" class="portfolio__title">🚀 Mi Portafolio - Proyectos Destacados</h2>
-                <div class="portfolio__grid" >
+                <div class="portfolio__grid">
                     <article class="portfolio__project portfolio__project--featured img-salon">
-                        <h3 class="portfolio__project-name" >
-                            <a href="salon-de-belleza/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Salón de Belleza (se abre en nueva ventana)" >SALON DE BELLEZA</a>
-                        </h3>
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Salón de Belleza Elegance</h3>
+                            <p class="portfolio__project-desc">Sitio web moderno con galería de servicios y información de contacto</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="salon-de-belleza/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Salón de Belleza (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
                     </article>
                     <article class="portfolio__project img-boutique">
-                        <h3 class="portfolio__project-name">
-                            <a href="boutique/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Boutique (se abre en nueva ventana)" >BOUTIQUE</a>
-                        </h3>
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Boutique Fashion</h3>
+                            <p class="portfolio__project-desc">E-commerce moderno con catálogo de productos y diseño elegante</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • JavaScript</div>
+                            <a href="boutique/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Boutique (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
                     </article>
                     <article class="portfolio__project img-cell">
-                        <h3 class="portfolio__project-name">
-                            <a href="store-cell/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Celulares (se abre en nueva ventana)" >STORE CELL</a>
-                        </h3>
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Store Cell Tech</h3>
+                            <p class="portfolio__project-desc">Tienda online de celulares con catálogo interactivo</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="store-cell/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Celulares (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
                     </article>
                     <article class="portfolio__project img-restaurant">
-                        <h3 class="portfolio__project-name">
-                            <a href="restaurant/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Restaurante (se abre en nueva ventana)">RESTAURANT PAGE</a>
-                        </h3>
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Restaurant Delicious</h3>
+                            <p class="portfolio__project-desc">Página web para restaurante con menú digital y reservas</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • UX/UI</div>
+                            <a href="restaurant/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Restaurante (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
                     </article>
                     <article class="portfolio__project img-shoes">
-                        <h3 class="portfolio__project-name">
-                            <a href="store-shoes/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)">STORE SHOES</a>
-                        </h3>
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Store Shoes Fashion</h3>
+                            <p class="portfolio__project-desc">Tienda online de zapatos con diseño moderno y funcional</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="store-shoes/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -228,17 +306,23 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label class="form__label" for="firstName">Nombre*</label>
-                            <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Tu nombre" required aria-required="true">
+                            <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Tu nombre" required aria-required="true" autocomplete="given-name">
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="lastName">Apellido*</label>
-                            <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Tu apellido" required aria-required="true">
+                            <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Tu apellido" required aria-required="true" autocomplete="family-name">
                         </div>
                     </div>
                     <div class="form__row form__row--full">
                         <div class="form__group">
                             <label class="form__label" for="email">Correo Electrónico*</label>
-                            <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required aria-required="true">
+                            <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required aria-required="true" autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="phone">Teléfono (opcional)</label>
+                            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+57 300 123 4567" autocomplete="tel">
                         </div>
                     </div>
                     <div class="form__row form__row--full">
@@ -248,33 +332,79 @@
                         </div>
                     </div>
                     <div class="form__row form__row--full">
-                        <button class="form__submit" type="submit">Enviar Mensaje y Solicitar Cotización u información</button>
+                        <button class="form__submit" type="submit">Enviar Mensaje y Solicitar Cotización</button>
                     </div>
                 </form>
+                <div class="form__alternative">
+                    <p>También puedes contactarme directamente:</p>
+                    <div class="contact__info">
+                        <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email">📧 webdev.rafel@gmail.com</a>
+                        <a href="https://wa.me/573122915287" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">📱 WhatsApp</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/573122915287?text=Hola,%20estoy%20interesado%20en%20tus%20servicios.%20Me%20gustaría%20recibir%20más%20información." 
-    class="whatsapp-btn" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
-    Contactame por WhatsApp
-</a>
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
+        Contactame por WhatsApp
     </a>
 
     <footer class="footer" role="contentinfo">
         <div class="footer__content">
-            <p>© 2025 Rafael - WebDev.Rafel. Todos los derechos reservados.</p>
-            <p>Desarrollador Web en Colombia | Especialista en Páginas Web Modernas y Responsive</p>
-            <p>Contacto: <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email a webdev.rafel@gmail.com">webdev.rafel@gmail.com</a> 
-            <p >Política de Privacidad | Términos de Uso</p>  
-            <a href="https://www.facebook.com/profile.php?id=61579849271013" target="_blank">Facebook</a> | 
-            <a href="https://www.instagram.com/webdev.rafel/" target="_blank">Instagram</a>
+            <div class="footer__main">
+                <p>© 2025 Rafael - WebDev.Rafel. Todos los derechos reservados.</p>
+                <p>Desarrollador Web en Colombia | Especialista en Páginas Web Modernas y Responsive</p>
+            </div>
+            <div class="footer__contact">
+                <p>Contacto: <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email a webdev.rafel@gmail.com">webdev.rafel@gmail.com</a></p>
+            </div>
+            <div class="footer__legal">
+                <a href="#privacy" aria-label="Ver política de privacidad">Política de Privacidad</a> | 
+                <a href="#terms" aria-label="Ver términos de uso">Términos de Uso</a>
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=61579849271013" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Facebook">Facebook</a> | 
+                <a href="https://www.instagram.com/webdev.rafel/" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Instagram">Instagram</a>
+            </div>
             <hr class="footer__divider">
-            
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Ir al inicio de la página" style="display: none;">
+        ↑
+    </button>
+
+    <!-- Basic JavaScript for scroll to top -->
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form submission feedback
+        const form = document.querySelector('.form__form');
+        form.addEventListener('submit', function() {
+            const submitBtn = form.querySelector('.form__submit');
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+        });
+    </script>
 </body>
 </html>
