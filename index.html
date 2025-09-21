@@ -377,26 +377,10 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Ir al inicio de la página" style="display: none;">
-        ↑
-    </button>
+    
 
     <!-- Basic JavaScript for scroll to top -->
     <script>
-        // Scroll to top functionality
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-        
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
         
         // Form submission feedback
         const form = document.querySelector('.form__form');
@@ -408,3 +392,4 @@
     </script>
 </body>
 </html>
+
