@@ -390,8 +390,32 @@
             submitBtn.disabled = true;
         });
     </script>
+    <script>
+// Fix viewport height
+function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+
+// Detectar dispositivos Xiaomi/Redmi
+function detectXiaomi() {
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes('Mi ') || userAgent.includes('Redmi') || userAgent.includes('MIUI')) {
+        document.body.classList.add('xiaomi-device');
+    }
+}
+
+// Ejecutar al cargar y al cambiar orientación
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+document.addEventListener('DOMContentLoaded', () => {
+    setVH();
+    detectXiaomi();
+});
+</script>
 </body>
 </html>
+
 
 
 
