@@ -1527,10 +1527,20 @@ body {
     }
 }
 
-/* Solo aplicar restricciones de ancho máximo en móviles */
 @media (max-width: 480px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+
     .services__grid,
-    .portfolio__grid {
+    .portfolio__grid,
+    .skills__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         justify-items: center;
     }
     
@@ -1539,6 +1549,26 @@ body {
     .portfolio__project {
         width: 100%;
         max-width: 350px;
+    }
+
+    .service__card,
+    .skill__item {
+        padding: 1.5rem;
+    }
+
+    .form__form {
+        padding: 1.5rem;
+    }
+    
+    body {
+        font-size: clamp(14px, 4vw, 16px);
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, .hero__title, .services__title, .skills__title, .portfolio__title, .form__title {
+        line-height: 1.2;
+        word-wrap: break-word;
+        hyphens: auto;
     }
 }
 
