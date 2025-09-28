@@ -685,7 +685,7 @@ body {
     background-repeat: no-repeat;
 }
 .img-shoes{
-    background-image: url(shoe.png);
+    background-image: url(sport-shoes.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1310,3 +1310,4 @@ body {
     white-space: nowrap;
     border: 0;
 }
+
