@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <a href="#inicio" class="logo">[NOMBRE DE TU TIENDA]</a>
@@ -16,27 +15,106 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#envios">Envíos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <div class="cart-icon" id="cartIcon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button class="close-cart" id="closeCart">✕</button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <p class="empty-cart">Tu carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-content">
+            <div class="payment-header">
+                <h2>Formas de Pago</h2>
+                <button class="close-payment" id="closePayment">✕</button>
+            </div>
+            <div class="payment-body">
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <div class="payment-icon">🏦</div>
+                        <h3>Transferencia Bancaria</h3>
+                        <div class="payment-details">
+                            <p><strong>Banco:</strong> [Tu Banco]</p>
+                            <p><strong>Cuenta:</strong> [Número de Cuenta]</p>
+                            <p><strong>Titular:</strong> [Nombre del Titular]</p>
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">💵</div>
+                        <h3>Efectivo</h3>
+                        <div class="payment-details">
+                            <p>Pago en efectivo en nuestra tienda física</p>
+                            <p><strong>Dirección:</strong> [Tu Dirección]</p>
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">📱</div>
+                        <h3>Nequi</h3>
+                        <div class="payment-details">
+                            <p><strong>Número:</strong> [Tu Número Nequi]</p>
+                            <p>A nombre de [Nombre]</p>
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">💳</div>
+                        <h3>Daviplata</h3>
+                        <div class="payment-details">
+                            <p><strong>Número:</strong> [Tu Número Daviplata]</p>
+                            <p>A nombre de [Nombre]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-info-box">
+                    <div class="info-icon">ℹ️</div>
+                    <p>Una vez realizado el pago, envíanos el comprobante por WhatsApp al <strong>+57 [Tu WhatsApp]</strong> para procesar tu pedido.</p>
+                </div>
+                <button class="whatsapp-confirm-btn" id="whatsappConfirm">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Confirmar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>[NOMBRE DE TU TIENDA]</h1>
             <p>La mejor selección de equipamiento deportivo para campeones</p>
-            <p class="delivery-text">🚚 Envíos a toda Colombia</p>
+            <p class="delivery-text">Envíos a toda Colombia</p>
             <a href="#productos" class="btn-primary">Ver Productos</a>
         </div>
     </section>
 
-    <!-- Content Container -->
     <div class="content">
-        <!-- Sección Principal de Categorías -->
         <section id="productos" class="section">
             <h2>Nuestras Categorías</h2>
             <div class="categories-grid">
-                <!-- Caja Zapatillas -->
                 <div class="category-box">
                     <div class="category-icon">🏃‍♂️</div>
                     <div class="category-image">FOTO CATEGORÍA ZAPATILLAS</div>
@@ -46,8 +124,6 @@
                         <a href="#zapatillas" class="view-btn">Ver Productos</a>
                     </div>
                 </div>
-
-                <!-- Caja Guayos -->
                 <div class="category-box">
                     <div class="category-icon">⚽</div>
                     <div class="category-image">FOTO CATEGORÍA GUAYOS</div>
@@ -57,8 +133,6 @@
                         <a href="#guayos" class="view-btn">Ver Productos</a>
                     </div>
                 </div>
-
-                <!-- Caja Trofeos -->
                 <div class="category-box">
                     <div class="category-icon">🏆</div>
                     <div class="category-image">FOTO CATEGORÍA TROFEOS</div>
@@ -68,8 +142,6 @@
                         <a href="#trofeos" class="view-btn">Ver Productos</a>
                     </div>
                 </div>
-
-                <!-- Caja Accesorios -->
                 <div class="category-box">
                     <div class="category-icon">🎽</div>
                     <div class="category-image">FOTO CATEGORÍA ACCESORIOS</div>
@@ -82,10 +154,9 @@
             </div>
         </section>
 
-        <!-- Sección Zapatillas -->
         <section id="zapatillas" class="products-section">
             <div class="section-header">
-                <h2>🏃‍♂️ Zapatillas Deportivas</h2>
+                <h2>Zapatillas Deportivas</h2>
                 <p>La mejor selección de calzado deportivo</p>
             </div>
             <div class="products-grid">
@@ -93,54 +164,60 @@
                     <div class="product-image">FOTO DE ZAPATILLA 1</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Zapatillas de running de alta performance para entrenamientos intensos.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Zapatilla Running Pro</h4>
+                        <p class="product-description">Zapatillas de running de alta performance.</p>
+                        <div class="product-price">$150,000</div>
+                        <button class="add-to-cart-btn" data-name="Zapatilla Running Pro" data-price="150000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ZAPATILLA 2</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Zapatillas de basketball con tecnología de amortiguación avanzada.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Basketball Elite</h4>
+                        <p class="product-description">Zapatillas de basketball con amortiguación avanzada.</p>
+                        <div class="product-price">$180,000</div>
+                        <button class="add-to-cart-btn" data-name="Basketball Elite" data-price="180000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ZAPATILLA 3</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Zapatillas de entrenamiento versátiles para todo tipo de ejercicio.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Training Versatile</h4>
+                        <p class="product-description">Zapatillas versátiles para todo tipo de ejercicio.</p>
+                        <div class="product-price">$130,000</div>
+                        <button class="add-to-cart-btn" data-name="Training Versatile" data-price="130000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ZAPATILLA 4</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Zapatillas de tenis profesionales con suela especializada.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Tennis Pro Court</h4>
+                        <p class="product-description">Zapatillas de tenis profesionales.</p>
+                        <div class="product-price">$160,000</div>
+                        <button class="add-to-cart-btn" data-name="Tennis Pro Court" data-price="160000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ZAPATILLA 5</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
+                        <h4>Casual Sport</h4>
                         <p class="product-description">Zapatillas casuales deportivas para uso diario.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <div class="product-price">$120,000</div>
+                        <button class="add-to-cart-btn" data-name="Casual Sport" data-price="120000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ZAPATILLA 6</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
+                        <h4>Trail Mountain</h4>
                         <p class="product-description">Zapatillas de trail running para terrenos difíciles.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <div class="product-price">$170,000</div>
+                        <button class="add-to-cart-btn" data-name="Trail Mountain" data-price="170000">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
@@ -149,10 +226,9 @@
             </div>
         </section>
 
-        <!-- Sección Guayos -->
         <section id="guayos" class="products-section">
             <div class="section-header">
-                <h2>⚽ Guayos de Fútbol</h2>
+                <h2>Guayos de Fútbol</h2>
                 <p>Equipamiento profesional para el campo de juego</p>
             </div>
             <div class="products-grid">
@@ -160,54 +236,60 @@
                     <div class="product-image">FOTO DE GUAYO 1</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos profesionales para césped natural con tacos de aluminio.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Pro Natural Césped</h4>
+                        <p class="product-description">Guayos profesionales para césped natural.</p>
+                        <div class="product-price">$200,000</div>
+                        <button class="add-to-cart-btn" data-name="Pro Natural Césped" data-price="200000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE GUAYO 2</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos para césped sintético con suela especializada.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Sintético Plus</h4>
+                        <p class="product-description">Guayos para césped sintético.</p>
+                        <div class="product-price">$180,000</div>
+                        <button class="add-to-cart-btn" data-name="Sintético Plus" data-price="180000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE GUAYO 3</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos de fútbol sala con agarre superior en canchas lisas.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Sala Grip</h4>
+                        <p class="product-description">Guayos de fútbol sala con agarre superior.</p>
+                        <div class="product-price">$140,000</div>
+                        <button class="add-to-cart-btn" data-name="Sala Grip" data-price="140000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE GUAYO 4</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos para niños con sistema de ajuste fácil.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Kids Easy Fit</h4>
+                        <p class="product-description">Guayos para niños con ajuste fácil.</p>
+                        <div class="product-price">$100,000</div>
+                        <button class="add-to-cart-btn" data-name="Kids Easy Fit" data-price="100000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE GUAYO 5</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos de alto rendimiento para jugadores profesionales.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Performance Elite</h4>
+                        <p class="product-description">Guayos de alto rendimiento profesional.</p>
+                        <div class="product-price">$250,000</div>
+                        <button class="add-to-cart-btn" data-name="Performance Elite" data-price="250000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE GUAYO 6</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL PRODUCTO]</h4>
-                        <p class="product-description">Guayos versátiles para múltiples superficies de juego.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Multi Surface</h4>
+                        <p class="product-description">Guayos versátiles para múltiples superficies.</p>
+                        <div class="product-price">$160,000</div>
+                        <button class="add-to-cart-btn" data-name="Multi Surface" data-price="160000">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
@@ -216,10 +298,9 @@
             </div>
         </section>
 
-        <!-- Sección Trofeos -->
         <section id="trofeos" class="products-section">
             <div class="section-header">
-                <h2>🏆 Trofeos y Reconocimientos</h2>
+                <h2>Trofeos y Reconocimientos</h2>
                 <p>Premia el esfuerzo y la dedicación</p>
             </div>
             <div class="products-grid">
@@ -227,63 +308,71 @@
                     <div class="product-image">FOTO DE TROFEO 1</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE TROFEO]</h4>
-                        <p class="product-description">Trofeo dorado para campeonatos con grabado personalizado.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Trofeo Dorado Champion</h4>
+                        <p class="product-description">Trofeo dorado con grabado personalizado.</p>
+                        <div class="product-price">$80,000</div>
+                        <button class="add-to-cart-btn" data-name="Trofeo Dorado Champion" data-price="80000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE TROFEO 2</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE TROFEO]</h4>
-                        <p class="product-description">Trofeo de cristal elegante para eventos especiales.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Cristal Elegante</h4>
+                        <p class="product-description">Trofeo de cristal para eventos especiales.</p>
+                        <div class="product-price">$120,000</div>
+                        <button class="add-to-cart-btn" data-name="Cristal Elegante" data-price="120000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE MEDALLA 1</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE MEDALLA]</h4>
-                        <p class="product-description">Medallas de oro, plata y bronce para competencias.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Set Medallas</h4>
+                        <p class="product-description">Medallas de oro, plata y bronce.</p>
+                        <div class="product-price">$45,000</div>
+                        <button class="add-to-cart-btn" data-name="Set Medallas" data-price="45000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE PLACA</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE PLACA]</h4>
-                        <p class="product-description">Placas conmemorativas en madera y metal.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Placa Conmemorativa</h4>
+                        <p class="product-description">Placas en madera y metal.</p>
+                        <div class="product-price">$65,000</div>
+                        <button class="add-to-cart-btn" data-name="Placa Conmemorativa" data-price="65000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE COPA</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE COPA]</h4>
-                        <p class="product-description">Copas deportivas de diferentes tamaños y diseños.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Copa Deportiva Premium</h4>
+                        <p class="product-description">Copas deportivas de diferentes tamaños.</p>
+                        <div class="product-price">$95,000</div>
+                        <button class="add-to-cart-btn" data-name="Copa Deportiva Premium" data-price="95000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE DIPLOMA</div>
                     <div class="product-info">
                         <div class="brand-space">[FABRICANTE]</div>
-                        <h4>[TIPO DE DIPLOMA]</h4>
-                        <p class="product-description">Diplomas y certificados deportivos personalizados.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Diploma Personalizado</h4>
+                        <p class="product-description">Diplomas y certificados deportivos.</p>
+                        <div class="product-price">$25,000</div>
+                        <button class="add-to-cart-btn" data-name="Diploma Personalizado" data-price="25000">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
+            <div class="back-to-categories">
+                <a href="#productos" class="btn-secondary">← Volver a Categorías</a>
+            </div>
         </section>
 
-        <!-- Sección Accesorios -->
         <section id="accesorios" class="products-section">
             <div class="section-header">
-                <h2>🎽 Accesorios Deportivos</h2>
+                <h2>Accesorios Deportivos</h2>
                 <p>Complementa tu equipamiento deportivo</p>
             </div>
             <div class="products-grid">
@@ -291,326 +380,340 @@
                     <div class="product-image">FOTO DE ACCESORIO 1</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Balones de fútbol profesionales de alta calidad.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Balón Profesional</h4>
+                        <p class="product-description">Balones de fútbol profesionales.</p>
+                        <div class="product-price">$85,000</div>
+                        <button class="add-to-cart-btn" data-name="Balón Profesional" data-price="85000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ACCESORIO 2</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Mochilas deportivas con compartimentos especializados.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Mochila Sport Pro</h4>
+                        <p class="product-description">Mochilas con compartimentos especializados.</p>
+                        <div class="product-price">$110,000</div>
+                        <button class="add-to-cart-btn" data-name="Mochila Sport Pro" data-price="110000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ACCESORIO 3</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Guantes de arquero con protección profesional.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Guantes Arquero Pro</h4>
+                        <p class="product-description">Guantes con protección profesional.</p>
+                        <div class="product-price">$75,000</div>
+                        <button class="add-to-cart-btn" data-name="Guantes Arquero Pro" data-price="75000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ACCESORIO 4</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Camisetas deportivas de diferentes equipos y tallas.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Camiseta Deportiva</h4>
+                        <p class="product-description">Camisetas de diferentes equipos.</p>
+                        <div class="product-price">$60,000</div>
+                        <button class="add-to-cart-btn" data-name="Camiseta Deportiva" data-price="60000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ACCESORIO 5</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Medias deportivas de compresión y comodidad.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Medias Compresión</h4>
+                        <p class="product-description">Medias de compresión y comodidad.</p>
+                        <div class="product-price">$35,000</div>
+                        <button class="add-to-cart-btn" data-name="Medias Compresión" data-price="35000">Agregar al Carrito</button>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">FOTO DE ACCESORIO 6</div>
                     <div class="product-info">
                         <div class="brand-space">[MARCA]</div>
-                        <h4>[NOMBRE DEL ACCESORIO]</h4>
-                        <p class="product-description">Conos y accesorios para entrenamiento deportivo.</p>
-                        <div class="product-price">$[PRECIO]</div>
+                        <h4>Kit Entrenamiento</h4>
+                        <p class="product-description">Conos y accesorios para entrenamiento.</p>
+                        <div class="product-price">$50,000</div>
+                        <button class="add-to-cart-btn" data-name="Kit Entrenamiento" data-price="50000">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
+            <div class="back-to-categories">
+                <a href="#productos" class="btn-secondary">← Volver a Categorías</a>
+            </div>
         </section>
 
-        <!-- Formulario de Envíos Nacionales -->
         <section id="envios" class="shipping-form">
             <div class="form-container">
-                <h2>📦 Solicitar Envío Nacional</h2>
+                <h2>Solicitar Envío Nacional</h2>
                 <p style="text-align: center; margin-bottom: 2rem;">Completa todos los datos para procesar tu pedido y envío</p>
-                
                 <form action="mailto:tuEmail@ejemplo.com" method="post" enctype="text/plain">
-                    <!-- Información Personal -->
                     <div class="form-section">
-                        <h3>👤 Información Personal</h3>
+                        <h3>Información Personal</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="nombre_completo">Nombre Completo *</label>
-                                <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre y apellidos completos" required>
+                                <input type="text" id="nombre_completo" name="nombre_completo" required>
                             </div>
                             <div class="form-group">
-                                <label for="cedula">Cédula de Ciudadanía *</label>
-                                <input type="text" id="cedula" name="cedula" placeholder="Número de cédula" required>
+                                <label for="cedula">Cédula *</label>
+                                <input type="text" id="cedula" name="cedula" required>
                             </div>
                             <div class="form-group">
-                                <label for="email_envio">Correo Electrónico *</label>
-                                <input type="email" id="email_envio" name="email" placeholder="correo@ejemplo.com" required>
+                                <label for="email_envio">Correo *</label>
+                                <input type="email" id="email_envio" name="email" required>
                             </div>
                             <div class="form-group">
-                                <label for="telefono_envio">Número de Teléfono/Celular *</label>
-                                <input type="tel" id="telefono_envio" name="telefono" placeholder="+57 300 123 4567" required>
+                                <label for="telefono_envio">Teléfono *</label>
+                                <input type="tel" id="telefono_envio" name="telefono" required>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Dirección de Envío -->
                     <div class="form-section">
-                        <h3>📍 Dirección de Envío</h3>
+                        <h3>Dirección de Envío</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="departamento">Departamento *</label>
                                 <select id="departamento" name="departamento" required>
-                                    <option value="">Selecciona el departamento</option>
-                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="">Selecciona</option>
                                     <option value="Antioquia">Antioquia</option>
-                                    <option value="Arauca">Arauca</option>
                                     <option value="Atlántico">Atlántico</option>
+                                    <option value="Bogotá">Bogotá D.C.</option>
                                     <option value="Bolívar">Bolívar</option>
-                                    <option value="Boyacá">Boyacá</option>
-                                    <option value="Caldas">Caldas</option>
-                                    <option value="Caquetá">Caquetá</option>
-                                    <option value="Casanare">Casanare</option>
-                                    <option value="Cauca">Cauca</option>
-                                    <option value="Cesar">Cesar</option>
-                                    <option value="Chocó">Chocó</option>
-                                    <option value="Córdoba">Córdoba</option>
-                                    <option value="Cundinamarca">Cundinamarca</option>
-                                    <option value="Guainía">Guainía</option>
-                                    <option value="Guaviare">Guaviare</option>
-                                    <option value="Huila">Huila</option>
-                                    <option value="La Guajira">La Guajira</option>
-                                    <option value="Magdalena">Magdalena</option>
-                                    <option value="Meta">Meta</option>
-                                    <option value="Nariño">Nariño</option>
-                                    <option value="Norte de Santander">Norte de Santander</option>
-                                    <option value="Putumayo">Putumayo</option>
-                                    <option value="Quindío">Quindío</option>
-                                    <option value="Risaralda">Risaralda</option>
-                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-                                    <option value="Santander">Santander</option>
-                                    <option value="Sucre">Sucre</option>
-                                    <option value="Tolima">Tolima</option>
-                                    <option value="Valle del Cauca">Valle del Cauca</option>
-                                    <option value="Vaupés">Vaupés</option>
-                                    <option value="Vichada">Vichada</option>
-                                    <option value="Bogotá D.C.">Bogotá D.C.</option>
+                                    <option value="Valle">Valle del Cauca</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="ciudad">Ciudad/Municipio *</label>
-                                <input type="text" id="ciudad" name="ciudad" placeholder="Nombre de la ciudad" required>
+                                <label for="ciudad">Ciudad *</label>
+                                <input type="text" id="ciudad" name="ciudad" required>
                             </div>
                             <div class="form-group full-width">
-                                <label for="direccion">Dirección Completa *</label>
-                                <input type="text" id="direccion" name="direccion" placeholder="Calle/Carrera, número, barrio, referencias" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="codigo_postal">Código Postal</label>
-                                <input type="text" id="codigo_postal" name="codigo_postal" placeholder="Código postal (si aplica)">
-                            </div>
-                            <div class="form-group">
-                                <label for="barrio">Barrio/Localidad</label>
-                                <input type="text" id="barrio" name="barrio" placeholder="Nombre del barrio">
+                                <label for="direccion">Dirección *</label>
+                                <input type="text" id="direccion" name="direccion" required>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Información del Pedido -->
-                    <div class="form-section">
-                        <h3>🛒 Información del Pedido</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="categoria_producto">Categoría del Producto *</label>
-                                <select id="categoria_producto" name="categoria_producto" required>
-                                    <option value="">Selecciona la categoría</option>
-                                    <option value="zapatillas">Zapatillas Deportivas</option>
-                                    <option value="guayos">Guayos de Fútbol</option>
-                                    <option value="trofeos">Trofeos y Reconocimientos</option>
-                                    <option value="accesorios">Accesorios Deportivos</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="talla">Talla (si aplica)</label>
-                                <select id="talla" name="talla">
-                                    <option value="">Selecciona la talla</option>
-                                    <option value="35">35</option>
-                                    <option value="36">36</option>
-                                    <option value="37">37</option>
-                                    <option value="38">38</option>
-                                    <option value="39">39</option>
-                                    <option value="40">40</option>
-                                    <option value="41">41</option>
-                                    <option value="42">42</option>
-                                    <option value="43">43</option>
-                                    <option value="44">44</option>
-                                    <option value="45">45</option>
-                                    <option value="46">46</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="cantidad">Cantidad *</label>
-                                <input type="number" id="cantidad" name="cantidad" min="1" placeholder="1" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="color_preferencia">Color/Preferencia</label>
-                                <input type="text" id="color_preferencia" name="color_preferencia" placeholder="Color preferido o especificaciones">
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="descripcion_producto">Descripción del Producto *</label>
-                                <textarea id="descripcion_producto" name="descripcion_producto" placeholder="Describe el producto que deseas (marca, modelo, características específicas)" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Método de Envío -->
-                    <div class="form-section">
-                        <h3>🚚 Método de Envío</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="tipo_envio">Tipo de Envío *</label>
-                                <select id="tipo_envio" name="tipo_envio" required>
-                                    <option value="">Selecciona el tipo de envío</option>
-                                    <option value="domicilio">Envío a domicilio</option>
-                                    <option value="oficina">Envío a oficina de correos</option>
-                                    <option value="punto_servientrega">Punto Servientrega</option>
-                                    <option value="punto_interrapidisimo">Punto Interrapidísimo</option>
-                                    <option value="punto_coordinadora">Punto Coordinadora</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="urgencia">Urgencia del Envío</label>
-                                <select id="urgencia" name="urgencia">
-                                    <option value="normal">Normal (3-5 días hábiles)</option>
-                                    <option value="express">Express (1-2 días hábiles) - Costo adicional</option>
-                                    <option value="inmediato">Inmediato (mismo día) - Solo Bogotá/Medellín/Cali</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Información Adicional -->
-                    <div class="form-section">
-                        <h3>💬 Información Adicional</h3>
-                        <div class="form-group full-width">
-                            <label for="observaciones">Observaciones Especiales</label>
-                            <textarea id="observaciones" name="observaciones" placeholder="Cualquier información adicional sobre el envío, horarios de entrega, referencias del domicilio, etc."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" name="acepta_terminos" required>
-                                Acepto los términos y condiciones de envío
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox" name="acepta_datos">
-                                Acepto el tratamiento de mis datos personales
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">📦 Solicitar Envío</button>
-                    <p class="form-note">* Te contactaremos en las próximas 2 horas para confirmar disponibilidad y costos de envío</p>
+                    <button type="submit" class="submit-btn">Enviar Solicitud</button>
                 </form>
             </div>
         </section>
 
-        <!-- Formulario de Contacto General -->
         <section id="contacto" class="contact-form">
             <div class="form-container">
-                <h2>📞 Contacto General</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">¿Tienes alguna pregunta? ¡Nos encantaría ayudarte!</p>
-                
+                <h2>Contacto</h2>
                 <form action="mailto:tuEmail@ejemplo.com" method="post" enctype="text/plain">
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono">
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto</label>
-                            <select id="asunto" name="asunto">
-                                <option value="">Selecciona el tema</option>
-                                <option value="consulta_producto">Consulta sobre productos</option>
-                                <option value="disponibilidad">Disponibilidad y precios</option>
-                                <option value="garantia">Garantías y devoluciones</option>
-                                <option value="envios_info">Información de envíos</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group full-width">
                             <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    <button type="submit" class="submit-btn">Enviar</button>
                 </form>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>[NOMBRE DE TU TIENDA]</h3>
-                    <p>Tu tienda de confianza para equipamiento deportivo de calidad.</p>
-                    <p>🚚 <strong>Envíos a toda Colombia</strong></p>
+                    <p>Tu tienda de confianza</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p>📍 [DIRECCIÓN DE TU TIENDA]</p>
-                    <p>📞 [TELÉFONO]</p>
-                    <p>✉️ [EMAIL]</p>
-                    <p>📱 WhatsApp: [WHATSAPP]</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Horarios de Atención</h3>
-                    <p>Lunes a Viernes: [HORARIO]</p>
-                    <p>Sábados: [HORARIO]</p>
-                    <p>Domingos: [HORARIO]</p>
-                    <p><strong>Envíos:</strong> Procesamos pedidos de lunes a viernes</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Información de Envíos</h3>
-                    <p>🕐 Tiempo de entrega: 3-5 días hábiles</p>
-                    <p>💰 Envío gratis desde $[MONTO_ENVIO_GRATIS]</p>
-                    <p>📦 Cobertura nacional</p>
-                    <p>🔄 Devoluciones gratuitas</p>
+                    <p>[TELÉFONO]</p>
+                    <p>[EMAIL]</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 [NOMBRE DE TU TIENDA]. Todos los derechos reservados. | Envíos seguros a toda Colombia</p>
+                <p>&copy; 2025 [NOMBRE DE TU TIENDA]</p>
             </div>
         </footer>
     </div>
+
+    <script>
+        var cart = [];
+
+        window.onload = function() {
+            var cartIcon = document.getElementById('cartIcon');
+            var cartModal = document.getElementById('cartModal');
+            var closeCart = document.getElementById('closeCart');
+            var cartBody = document.getElementById('cartBody');
+            var cartCount = document.getElementById('cartCount');
+            var cartTotal = document.getElementById('cartTotal');
+            var checkoutBtn = document.getElementById('checkoutBtn');
+            var paymentModal = document.getElementById('paymentModal');
+            var closePayment = document.getElementById('closePayment');
+            var whatsappConfirm = document.getElementById('whatsappConfirm');
+
+            console.log('Script cargado');
+
+            cartIcon.onclick = function() {
+                console.log('Abriendo carrito');
+                cartModal.classList.add('active');
+            };
+
+            closeCart.onclick = function() {
+                cartModal.classList.remove('active');
+            };
+
+            cartModal.onclick = function(e) {
+                if (e.target === cartModal) {
+                    cartModal.classList.remove('active');
+                }
+            };
+
+            closePayment.onclick = function() {
+                paymentModal.classList.remove('active');
+            };
+
+            paymentModal.onclick = function(e) {
+                if (e.target === paymentModal) {
+                    paymentModal.classList.remove('active');
+                }
+            };
+
+            var addButtons = document.querySelectorAll('.add-to-cart-btn');
+            console.log('Botones encontrados:', addButtons.length);
+
+            for (var i = 0; i < addButtons.length; i++) {
+                addButtons[i].onclick = function() {
+                    var name = this.getAttribute('data-name');
+                    var price = parseFloat(this.getAttribute('data-price'));
+                    
+                    console.log('Agregando:', name, price);
+
+                    var existingItem = null;
+                    for (var j = 0; j < cart.length; j++) {
+                        if (cart[j].name === name) {
+                            existingItem = cart[j];
+                            break;
+                        }
+                    }
+
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push({ name: name, price: price, quantity: 1 });
+                    }
+
+                    updateCart();
+                    
+                    this.textContent = 'Agregado!';
+                    this.style.background = '#4CAF50';
+                    var btn = this;
+                    setTimeout(function() {
+                        btn.textContent = 'Agregar al Carrito';
+                        btn.style.background = '';
+                    }, 1000);
+                };
+            }
+
+            function updateCart() {
+                console.log('Actualizando carrito:', cart);
+                
+                var totalItems = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    totalItems += cart[i].quantity;
+                }
+                cartCount.textContent = totalItems;
+
+                if (cart.length === 0) {
+                    cartBody.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
+                    cartTotal.textContent = '$0';
+                    return;
+                }
+
+                var html = '';
+                for (var i = 0; i < cart.length; i++) {
+                    var item = cart[i];
+                    html += '<div class="cart-item">';
+                    html += '<div class="cart-item-info">';
+                    html += '<h4>' + item.name + '</h4>';
+                    html += '<p>$' + item.price.toLocaleString() + '</p>';
+                    html += '</div>';
+                    html += '<div class="cart-item-controls">';
+                    html += '<button class="qty-btn" onclick="changeQuantity(\'' + item.name.replace(/'/g, "\\'") + '\', -1)">-</button>';
+                    html += '<span>' + item.quantity + '</span>';
+                    html += '<button class="qty-btn" onclick="changeQuantity(\'' + item.name.replace(/'/g, "\\'") + '\', 1)">+</button>';
+                    html += '<button class="remove-btn" onclick="removeItem(\'' + item.name.replace(/'/g, "\\'") + '\')">X</button>';
+                    html += '</div>';
+                    html += '</div>';
+                }
+                cartBody.innerHTML = html;
+
+                var total = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    total += cart[i].price * cart[i].quantity;
+                }
+                cartTotal.textContent = '$' + total.toLocaleString();
+            }
+
+            window.changeQuantity = function(name, delta) {
+                for (var i = 0; i < cart.length; i++) {
+                    if (cart[i].name === name) {
+                        cart[i].quantity += delta;
+                        if (cart[i].quantity <= 0) {
+                            cart.splice(i, 1);
+                        }
+                        updateCart();
+                        return;
+                    }
+                }
+            };
+
+            window.removeItem = function(name) {
+                for (var i = 0; i < cart.length; i++) {
+                    if (cart[i].name === name) {
+                        cart.splice(i, 1);
+                        updateCart();
+                        return;
+                    }
+                }
+            };
+
+            checkoutBtn.onclick = function() {
+                if (cart.length === 0) {
+                    alert('Tu carrito está vacío');
+                    return;
+                }
+                cartModal.classList.remove('active');
+                paymentModal.classList.add('active');
+            };
+
+            whatsappConfirm.onclick = function() {
+                if (cart.length === 0) {
+                    alert('Tu carrito está vacío');
+                    return;
+                }
+
+                var total = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    total += cart[i].price * cart[i].quantity;
+                }
+
+                var message = 'Hola! Quiero confirmar mi pedido:%0A%0A';
+                
+                for (var i = 0; i < cart.length; i++) {
+                    message += '• ' + cart[i].name + '%0A';
+                    message += '  Cantidad: ' + cart[i].quantity + '%0A';
+                    message += '  Precio: $' + cart[i].price.toLocaleString() + '%0A%0A';
+                }
+                
+                message += '*Total: $' + total.toLocaleString() + '*%0A%0A';
+                message += 'Espero su confirmación para proceder con el pago.';
+
+                var whatsappNumber = '573001234567';
+                window.open('https://wa.me/' + whatsappNumber + '?text=' + message, '_blank');
+            };
+        };
+    </script>
 </body>
 </html>
