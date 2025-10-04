@@ -1,1 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elegancia Dorada - Joyería fina y exclusiva. Encuentra anillos, collares, pulseras y aretes de la más alta calidad con diseños únicos.">
+    <meta name="keywords" content="joyería, joyas, anillos, collares, pulseras, aretes, oro, plata, diamantes">
+    <meta name="author" content="Elegancia Dorada">
+    <meta property="og:title" content="Elegancia Dorada - Joyería Fina">
+    <meta property="og:description" content="Descubre nuestra colección exclusiva de joyas de alta calidad">
+    <meta property="og:type" content="website">
+    <title>Elegancia Dorada - Joyería Fina y Exclusiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-gem"></i>
+                    <span>Elegancia Dorada</span>
+                </div>
+                <button class="menu-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <button class="cart-btn" aria-label="Carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Sección Hero con Parallax -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Elegancia Dorada</h1>
+            <p>Joyas únicas que reflejan tu estilo</p>
+            <a href="#productos" class="cta-btn">Explorar Colección</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sección de Productos -->
+        <section id="productos" class="productos-section">
+            <div class="container">
+                <h2 class="section-title">Nuestras Joyas</h2>
+                <p class="section-subtitle">Colección exclusiva de piezas únicas</p>
+                
+                <div class="productos-grid">
+                    <!-- Producto 1 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80" alt="Anillo de Diamantes">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(0)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Anillo Brillante Eterno</h3>
+                            <p class="producto-descripcion">Anillo de oro blanco 18k con diamante central de 1 quilate</p>
+                            <p class="producto-precio">$2,850,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(0)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80" alt="Collar de Perlas">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(1)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Collar Perlas Clásicas</h3>
+                            <p class="producto-descripcion">Collar de perlas naturales con broche de oro 14k</p>
+                            <p class="producto-precio">$1,450,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(1)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" alt="Pulsera de Oro">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(2)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Pulsera Elegancia</h3>
+                            <p class="producto-descripcion">Pulsera de oro amarillo 18k con diseño contemporáneo</p>
+                            <p class="producto-precio">$1,890,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(2)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80" alt="Aretes de Esmeralda">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(3)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Aretes Esmeralda Real</h3>
+                            <p class="producto-descripcion">Aretes de oro con esmeraldas colombianas naturales</p>
+                            <p class="producto-precio">$3,200,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(3)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 5 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=80" alt="Anillo de Zafiro">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(4)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Anillo Zafiro Azul</h3>
+                            <p class="producto-descripcion">Anillo de platino con zafiro azul y diamantes laterales</p>
+                            <p class="producto-precio">$4,100,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(4)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Producto 6 -->
+                    <article class="producto-card">
+                        <div class="producto-img">
+                            <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=500&q=80" alt="Collar de Diamantes">
+                            <div class="producto-overlay">
+                                <button class="btn-ver-detalles" onclick="verDetalles(5)">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="producto-info">
+                            <h3>Collar Riviera</h3>
+                            <p class="producto-descripcion">Collar de diamantes en oro blanco 18k, diseño riviera</p>
+                            <p class="producto-precio">$5,750,000</p>
+                            <button class="btn-agregar" onclick="agregarAlCarrito(5)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="nosotros" class="nosotros-section">
+            <div class="container">
+                <div class="nosotros-content">
+                    <div class="nosotros-img">
+                        <img src="https://images.unsplash.com/photo-1617038260431-8e543e868c2e?w=600&q=80" alt="Sobre Nosotros">
+                    </div>
+                    <div class="nosotros-text">
+                        <h2 class="section-title">Sobre Nosotros</h2>
+                        <p>En <strong>Elegancia Dorada</strong>, nos dedicamos a crear y seleccionar las joyas más exclusivas y elegantes del mercado. Con más de 15 años de experiencia en el sector de la joyería fina, cada pieza que ofrecemos es cuidadosamente seleccionada para garantizar la máxima calidad y belleza.</p>
+                        <p>Trabajamos con los mejores artesanos y utilizamos únicamente materiales preciosos certificados: oro de 18k y 14k, platino, diamantes naturales y piedras preciosas de origen colombiano e internacional.</p>
+                        <p>Nuestra misión es hacer que cada momento especial sea inolvidable con joyas que perduran para toda la vida.</p>
+                        <div class="nosotros-features">
+                            <div class="feature">
+                                <i class="fas fa-certificate"></i>
+                                <h4>Certificación</h4>
+                                <p>Todas nuestras joyas están certificadas</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Garantía</h4>
+                                <p>Garantía de por vida en todas las piezas</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-gem"></i>
+                                <h4>Calidad Premium</h4>
+                                <p>Solo materiales de la más alta calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto-section">
+            <div class="container">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos aquí para atenderte</p>
+                
+                <div class="contacto-content">
+                    <div class="contacto-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Calle 85 #15-45, Local 102<br>Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+57 (601) 234-5678<br>+57 310 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@eleganciadorada.com<br>ventas@eleganciadorada.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contacto-form">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fas fa-gem"></i> Elegancia Dorada</h3>
+                    <p>Joyas únicas para momentos especiales. Calidad y elegancia en cada pieza.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Garantía</a></li>
+                        <li><a href="#">Envíos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Suscríbete para recibir ofertas exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elegancia Dorada. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/573104567890?text=Hola,%20estoy%20interesado%20en%20sus%20joyas" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal del Carrito -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+                <button class="close-modal" onclick="cerrarCarrito()">&times;</button>
+            </div>
+            <div class="modal-body" id="cartItems">
+                <p class="empty-cart">Tu carrito está vacío</p>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0</span>
+                </div>
+                <button class="btn-finalizar" onclick="mostrarFormasPago()">
+                    <i class="fas fa-credit-card"></i> Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Formas de Pago -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-credit-card"></i> Formas de Pago</h3>
+                <button class="close-modal" onclick="cerrarFormasPago()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <i class="fas fa-university"></i>
+                        <h4>Transferencia Bancaria</h4>
+                        <p><strong>Banco:</strong> Banco de Bogotá</p>
+                        <p><strong>Cuenta:</strong> 123-456789-01</p>
+                        <p><strong>Titular:</strong> Elegancia Dorada S.A.S</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h4>Efectivo</h4>
+                        <p>Pago en efectivo en nuestra tienda física</p>
+                        <p>Calle 85 #15-45, Bogotá</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Nequi</h4>
+                        <p><strong>Número:</strong> 310 456-7890</p>
+                        <p>A nombre de Elegancia Dorada</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-wallet"></i>
+                        <h4>Daviplata</h4>
+                        <p><strong>Número:</strong> 310 456-7890</p>
+                        <p>A nombre de Elegancia Dorada</p>
+                    </div>
+                </div>
+                <div class="payment-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Una vez realizado el pago, envíanos el comprobante por WhatsApp al <strong>+57 310 456-7890</strong> para procesar tu pedido.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-contacto-whatsapp" onclick="contactarWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> Confirmar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos de productos
+        const productos = [
+            { id: 0, nombre: "Anillo Brillante Eterno", precio: 2850000, descripcion: "Anillo de oro blanco 18k con diamante central de 1 quilate", imagen: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80" },
+            { id: 1, nombre: "Collar Perlas Clásicas", precio: 1450000, descripcion: "Collar de perlas naturales con broche de oro 14k", imagen: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80" },
+            { id: 2, nombre: "Pulsera Elegancia", precio: 1890000, descripcion: "Pulsera de oro amarillo 18k con diseño contemporáneo", imagen: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
+            { id: 3, nombre: "Aretes Esmeralda Real", precio: 3200000, descripcion: "Aretes de oro con esmeraldas colombianas naturales", imagen: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80" },
+            { id: 4, nombre: "Anillo Zafiro Azul", precio: 4100000, descripcion: "Anillo de platino con zafiro azul y diamantes laterales", imagen: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=80" },
+            { id: 5, nombre: "Collar Riviera", precio: 5750000, descripcion: "Collar de diamantes en oro blanco 18k, diseño riviera", imagen: "https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=500&q=80" }
+        ];
+
+        // Carrito de compras
+        let carrito = [];
+
+        // Toggle menú móvil
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Header transparente en scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Funciones del carrito
+        function agregarAlCarrito(id) {
+            const producto = productos[id];
+            const itemExistente = carrito.find(item => item.id === id);
+            
+            if (itemExistente) {
+                itemExistente.cantidad++;
+            } else {
+                carrito.push({ ...producto, cantidad: 1 });
+            }
+            
+            actualizarCarrito();
+            mostrarNotificacion('Producto agregado al carrito');
+        }
+
+        function eliminarDelCarrito(id) {
+            carrito = carrito.filter(item => item.id !== id);
+            actualizarCarrito();
+        }
+
+        function actualizarCantidad(id, cambio) {
+            const item = carrito.find(item => item.id === id);
+            if (item) {
+                item.cantidad += cambio;
+                if (item.cantidad <= 0) {
+                    eliminarDelCarrito(id);
+                } else {
+                    actualizarCarrito();
+                }
+            }
+        }
+
+        function actualizarCarrito() {
+            const cartCount = document.querySelector('.cart-count');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            cartCount.textContent = totalItems;
+            
+            if (carrito.length === 0) {
+                cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
+                cartTotal.textContent = '$0';
+            } else {
+                let html = '';
+                let total = 0;
+                
+                carrito.forEach(item => {
+                    const subtotal = item.precio * item.cantidad;
+                    total += subtotal;
+                    
+                    html += `
+                        <div class="cart-item">
+                            <img src="${item.imagen}" alt="${item.nombre}">
+                            <div class="cart-item-info">
+                                <h4>${item.nombre}</h4>
+                                <p class="cart-item-precio">$${item.precio.toLocaleString('es-CO')}</p>
+                                <div class="cart-item-cantidad">
+                                    <button onclick="actualizarCantidad(${item.id}, -1)">-</button>
+                                    <span>${item.cantidad}</span>
+                                    <button onclick="actualizarCantidad(${item.id}, 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="cart-item-subtotal">
+                                <p>$${subtotal.toLocaleString('es-CO')}</p>
+                                <button onclick="eliminarDelCarrito(${item.id})" class="btn-eliminar">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                cartItems.innerHTML = html;
+                cartTotal.textContent = `$${total.toLocaleString('es-CO')}`;
+            }
+        }
+
+        function mostrarNotificacion(mensaje) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = mensaje;
+            document.body.appendChild(notif);
+            
+            setTimeout(() => {
+                notif.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notif.classList.remove('show');
+                setTimeout(() => notif.remove(), 300);
+            }, 2000);
+        }
+
+        // Modales
+        const cartBtn = document.querySelector('.cart-btn');
+        const cartModal = document.getElementById('cartModal');
+        const paymentModal = document.getElementById('paymentModal');
+
+        cartBtn.addEventListener('click', () => {
+            cartModal.style.display = 'flex';
+        });
+
+        function cerrarCarrito() {
+            cartModal.style.display = 'none';
+        }
+
+        function cerrarFormasPago() {
+            paymentModal.style.display = 'none';
+        }
+
+        function mostrarFormasPago() {
+            if (carrito.length === 0) {
+                mostrarNotificacion('Tu carrito está vacío');
+                return;
+            }
+            cartModal.style.display = 'none';
+            paymentModal.style.display = 'flex';
+        }
+
+        function contactarWhatsApp() {
+            if (carrito.length === 0) {
+                mostrarNotificacion('Tu carrito está vacío');
+                return;
+            }
+            
+            let mensaje = '¡Hola! Quiero realizar un pedido:\n\n';
+            let total = 0;
+            
+            carrito.forEach(item => {
+                const subtotal = item.precio * item.cantidad;
+                total += subtotal;
+                mensaje += `• ${item.nombre} x${item.cantidad} - $${subtotal.toLocaleString('es-CO')}\n`;
+            });
+            
+            mensaje += `\nTotal: $${total.toLocaleString('es-CO')}`;
+            
+            const url = `https://wa.me/573104567890?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        function verDetalles(id) {
+            const producto = productos[id];
+            alert(`${producto.nombre}\n\n${producto.descripcion}\n\nPrecio: $${producto.precio.toLocaleString('es-CO')}`);
+        }
+
+        // Cerrar modales al hacer click fuera
+        window.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cerrarCarrito();
+            }
+            if (e.target === paymentModal) {
+                cerrarFormasPago();
+            }
+        });
+
+        // Formulario de contacto
+        document.querySelector('.contacto-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const whatsappMsg = `Hola, soy ${nombre}.\nEmail: ${email}\nTeléfono: ${telefono}\n\nMensaje: ${mensaje}`;
+            const url = `https://wa.me/573104567890?text=${encodeURIComponent(whatsappMsg)}`;
+            window.open(url, '_blank');
+            
+            e.target.reset();
+            mostrarNotificacion('Mensaje enviado. Te contactaremos pronto.');
+        });
+
+        // Newsletter
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            mostrarNotificacion('¡Gracias por suscribirte!');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
