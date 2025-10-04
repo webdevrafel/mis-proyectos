@@ -1,628 +1,431 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elegancia Dorada - Joyería fina y exclusiva. Encuentra anillos, collares, pulseras y aretes de la más alta calidad con diseños únicos.">
-    <meta name="keywords" content="joyería, joyas, anillos, collares, pulseras, aretes, oro, plata, diamantes">
-    <meta name="author" content="Elegancia Dorada">
-    <meta property="og:title" content="Elegancia Dorada - Joyería Fina">
-    <meta property="og:description" content="Descubre nuestra colección exclusiva de joyas de alta calidad">
-    <meta property="og:type" content="website">
-    <title>Elegancia Dorada - Joyería Fina y Exclusiva</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Rafael - Desarrollador Web | Páginas Web Modernas y Responsive</title>
+    <meta name="description" content="Rafael - Desarrollador web especializado en páginas web modernas, responsive y optimizadas. Servicios de desarrollo web personalizado, diseño responsive y optimización de sitios. Solicita tu cotización gratuita.">
+    <meta name="keywords" content="desarrollador web, páginas web modernas, diseño responsive, desarrollo web personalizado, optimización web, Rafael desarrollador, webdev.rafel, sitios web profesionales">
+    <meta name="author" content="Rafael - WebDev.Rafel">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="CO">
+    <meta name="geo.placename" content="Colombia">
+    
+    <!-- Performance Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rafael - Desarrollador Web Moderno | WebDev.Rafel">
+<meta property="og:description" content="Desarrollador web especializado en crear experiencias digitales modernas y atractivas. Páginas web responsive y optimizadas.">
+<meta property="og:image" content="https://mis-proyectos-two.vercel.app/opengrap.png">
+<meta property="og:url" content="https://mis-proyectos-two.vercel.app/">
+<meta property="og:site_name" content="WebDev.Rafel">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rafael - Desarrollador Web Moderno">
+<meta name="twitter:description" content="Desarrollador web especializado en páginas web modernas, responsive y optimizadas.">
+<meta name="twitter:image" content="https://mis-proyectos-two.vercel.app/opengrap.png">
+<meta name="twitter:creator" content="@webdevrafel">
+
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mis-proyectos-two.vercel.app/">
+    
+    <!-- Fonts - Preload for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap&subset=latin" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="webdevrafelfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="webdevrafelfavicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="webdevrafel-apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rafael",
+        "alternateName": "WebDev.Rafel",
+        "description": "Desarrollador web especializado en páginas web modernas, responsive y optimizadas",
+        "url": "https://mis-proyectos-two.vercel.app/",
+        "image": "https://mis-proyectos-two.vercel.app/webdevrafel.jpg",
+        "sameAs": [
+            "https://wa.me/573122915287",
+            "https://www.facebook.com/profile.php?id=61579849271013",
+            "https://www.instagram.com/webdev.rafel/"
+        ],
+        "jobTitle": "Desarrollador Web",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "WebDev.Rafel"
+        },
+        "knowsAbout": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Desarrollo Web Responsive",
+            "Optimización Web",
+            "Diseño Web Moderno"
+        ],
+        "offers": {
+            "@type": "Service",
+            "serviceType": "Desarrollo Web",
+            "description": "Páginas web personalizadas, diseño responsive y moderno, optimización de sitios existentes"
+        }
+    }
+    </script>
+    
+    <!-- Additional Schema for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "WebDev.Rafel",
+        "description": "Desarrollador web en Colombia especializado en sitios web modernos",
+        "telephone": "+573122915287",
+        "email": "webdev.rafel@gmail.com",
+        "url": "https://mis-proyectos-two.vercel.app/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CO"
+        },
+        "priceRange": "$$",
+        "serviceArea": {
+            "@type": "Country",
+            "name": "Colombia"
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header / Navegación -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-gem"></i>
-                    <span>Elegancia Dorada</span>
-                </div>
-                <button class="menu-toggle" aria-label="Menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li>
-                        <button class="cart-btn" aria-label="Carrito">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count">0</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link sr-only">Saltar al contenido principal</a>
+    
+    <!-- Animated Background -->
+    <div class="animated-bg" aria-hidden="true"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles" aria-hidden="true">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+        <div class="particle particle-7"></div>
+        <div class="particle particle-8"></div>
+        <div class="particle particle-9"></div>
+    </div>
+
+    <header class="header" role="banner">
+        <input type="checkbox" class="header__checkbox sr-only" id="open-menu" aria-label="Abrir menú de navegación">
+        <div class="header__logo-container">
+            <img class="header__logo" src="webdevrafel.png" alt="WebDev.Rafel - Logo de Rafael Desarrollador Web" width="50" height="50">
+        </div>
+        <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
+                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
+                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
+                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
+            </ul>
         </nav>
+        <label for="open-menu" class="header__open-nav-button" aria-label="Abrir menú de navegación">☰</label>
+        <div class="mobile-nav" role="navigation" aria-label="Navegación móvil">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#hero" aria-label="Ir a sección de inicio">Inicio</a></li>
+                <li class="header__nav-item"><a href="#services" aria-label="Ir a sección de servicios">Servicios</a></li>
+                <li class="header__nav-item"><a href="#portfolio" aria-label="Ir a sección de portafolio">Portafolio</a></li>
+                <li class="header__nav-item"><a href="#form" aria-label="Ir a sección de contacto">Contacto</a></li>
+            </ul>
+        </div>
     </header>
 
-    <!-- Sección Hero con Parallax -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Elegancia Dorada</h1>
-            <p>Joyas únicas que reflejan tu estilo</p>
-            <a href="#productos" class="cta-btn">Explorar Colección</a>
-        </div>
-    </section>
+    <main id="main-content" role="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">WEBDEV.RAFEL</h1>
+                    <h2 class="hero__subtitle">Desarrollador Web Moderno en Colombia</h2>
+                    <p class="hero__description">
+                        WebDev.Rafel es mi marca personal. Un espacio donde muestro mi pasión, mi creatividad y mi visión en el mundo del desarrollo web. Aquí encontrarás proyectos que reflejan mi estilo, dedicación y enfoque en construir experiencias digitales modernas, prácticas y visualmente atractivas.
+                        <br><br>
+                        Soy un joven apasionado por el desarrollo web, siempre en constante aprendizaje para crecer y ofrecer soluciones digitales que marquen la diferencia. Especializado en crear páginas web que no solo se ven increíbles, sino que también funcionan perfectamente.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#form" class="cta-button" aria-label="Solicitar cotización de desarrollo web">Solicita tu Cotización</a>
+                        <a href="#portfolio" class="cta-button-secondary" aria-label="Ver proyectos realizados">Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="webdevrafel.png" alt="Rafael - Desarrollador Web Profesional especializado en páginas web modernas y responsive" class="hero__img" width="300" height="300" loading="eager">
+                </div>
+            </div>
+        </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Sección de Productos -->
-        <section id="productos" class="productos-section">
-            <div class="container">
-                <h2 class="section-title">Nuestras Joyas</h2>
-                <p class="section-subtitle">Colección exclusiva de piezas únicas</p>
-                
-                <div class="productos-grid">
-                    <!-- Producto 1 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80" alt="Anillo de Diamantes">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(0)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Anillo Brillante Eterno</h3>
-                            <p class="producto-descripcion">Anillo de oro blanco 18k con diamante central de 1 quilate</p>
-                            <p class="producto-precio">$2,850,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(0)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="services__container">
+                <h2 id="services-title" class="services__title">💼 Mis Servicios de Desarrollo Web</h2>
+                <div class="services__grid">
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">🌐</div>
+                        <h3 class="service__title">Páginas Web Personalizadas</h3>
+                        <p class="service__description">Desarrollo sitios web únicos y adaptados a tus necesidades específicas, con diseño moderno y funcionalidad optimizada. Cada proyecto es creado desde cero para reflejar la identidad de tu marca.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Diseño personalizado</span>
+                            <span class="service__feature">SEO optimizado</span>
+                            <span class="service__feature">Tiempo: 1-2 semanas</span>
                         </div>
                     </article>
-
-                    <!-- Producto 2 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80" alt="Collar de Perlas">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(1)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Collar Perlas Clásicas</h3>
-                            <p class="producto-descripcion">Collar de perlas naturales con broche de oro 14k</p>
-                            <p class="producto-precio">$1,450,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(1)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">📱</div>
+                        <h3 class="service__title">Diseño Responsive y Moderno</h3>
+                        <p class="service__description">Creo experiencias que se adaptan perfectamente a todos los dispositivos: móvil, tablet y desktop. Garantizo una navegación fluida y una experiencia de usuario excepcional en cualquier pantalla.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Mobile First</span>
+                            <span class="service__feature">UX/UI optimizado</span>
+                            <span class="service__feature">Tiempo: 3-5 días</span>
                         </div>
                     </article>
-
-                    <!-- Producto 3 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" alt="Pulsera de Oro">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(2)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Pulsera Elegancia</h3>
-                            <p class="producto-descripcion">Pulsera de oro amarillo 18k con diseño contemporáneo</p>
-                            <p class="producto-precio">$1,890,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(2)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Producto 4 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80" alt="Aretes de Esmeralda">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(3)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Aretes Esmeralda Real</h3>
-                            <p class="producto-descripcion">Aretes de oro con esmeraldas colombianas naturales</p>
-                            <p class="producto-precio">$3,200,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(3)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Producto 5 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=80" alt="Anillo de Zafiro">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(4)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Anillo Zafiro Azul</h3>
-                            <p class="producto-descripcion">Anillo de platino con zafiro azul y diamantes laterales</p>
-                            <p class="producto-precio">$4,100,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(4)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Producto 6 -->
-                    <article class="producto-card">
-                        <div class="producto-img">
-                            <img src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=500&q=80" alt="Collar de Diamantes">
-                            <div class="producto-overlay">
-                                <button class="btn-ver-detalles" onclick="verDetalles(5)">Ver Detalles</button>
-                            </div>
-                        </div>
-                        <div class="producto-info">
-                            <h3>Collar Riviera</h3>
-                            <p class="producto-descripcion">Collar de diamantes en oro blanco 18k, diseño riviera</p>
-                            <p class="producto-precio">$5,750,000</p>
-                            <button class="btn-agregar" onclick="agregarAlCarrito(5)">
-                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                            </button>
+                    <article class="service__card">
+                        <div class="service__icon" aria-hidden="true">⚡</div>
+                        <h3 class="service__title">Optimización de Sitios Web</h3>
+                        <p class="service__description">Mejoro el rendimiento y la velocidad de sitios web existentes. Optimizo código, imágenes y estructuras para mejorar el posicionamiento SEO y la experiencia del usuario.</p>
+                        <div class="service__features">
+                            <span class="service__feature">Velocidad mejorada</span>
+                            <span class="service__feature">SEO técnico</span>
+                            <span class="service__feature">Tiempo: 1 semana</span>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Sobre Nosotros -->
-        <section id="nosotros" class="nosotros-section">
-            <div class="container">
-                <div class="nosotros-content">
-                    <div class="nosotros-img">
-                        <img src="https://images.unsplash.com/photo-1617038260431-8e543e868c2e?w=600&q=80" alt="Sobre Nosotros">
-                    </div>
-                    <div class="nosotros-text">
-                        <h2 class="section-title">Sobre Nosotros</h2>
-                        <p>En <strong>Elegancia Dorada</strong>, nos dedicamos a crear y seleccionar las joyas más exclusivas y elegantes del mercado. Con más de 15 años de experiencia en el sector de la joyería fina, cada pieza que ofrecemos es cuidadosamente seleccionada para garantizar la máxima calidad y belleza.</p>
-                        <p>Trabajamos con los mejores artesanos y utilizamos únicamente materiales preciosos certificados: oro de 18k y 14k, platino, diamantes naturales y piedras preciosas de origen colombiano e internacional.</p>
-                        <p>Nuestra misión es hacer que cada momento especial sea inolvidable con joyas que perduran para toda la vida.</p>
-                        <div class="nosotros-features">
-                            <div class="feature">
-                                <i class="fas fa-certificate"></i>
-                                <h4>Certificación</h4>
-                                <p>Todas nuestras joyas están certificadas</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-shield-alt"></i>
-                                <h4>Garantía</h4>
-                                <p>Garantía de por vida en todas las piezas</p>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-gem"></i>
-                                <h4>Calidad Premium</h4>
-                                <p>Solo materiales de la más alta calidad</p>
-                            </div>
+        <section class="skills" aria-labelledby="skills-title">
+            <div class="skills__container">
+                <h2 id="skills-title" class="skills__title">💪 Mis Habilidades Técnicas</h2>
+                <div class="skills__grid">
+                    <article class="skill__item">
+                        <div class="skill__name">HTML5</div>
+                        <div class="skill__percentage">100%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5: 100% de conocimiento">
+                            <div class="skill__progress skill__progress--html"></div>
                         </div>
-                    </div>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">CSS3</div>
+                        <div class="skill__percentage">100%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 y Frameworks: 100% de conocimiento">
+                            <div class="skill__progress skill__progress--css"></div>
+                        </div>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">JavaScript</div>
+                        <div class="skill__percentage">85%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript: 85% de conocimiento">
+                            <div class="skill__progress skill__progress--js"></div>
+                        </div>
+                    </article>
+                    <article class="skill__item">
+                        <div class="skill__name">Responsive Design</div>
+                        <div class="skill__percentage">95%</div>
+                        <div class="skill__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design: 95% de conocimiento">
+                            <div class="skill__progress skill__progress--responsive"></div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Contacto -->
-        <section id="contacto" class="contacto-section">
-            <div class="container">
-                <h2 class="section-title">Contáctanos</h2>
-                <p class="section-subtitle">Estamos aquí para atenderte</p>
-                
-                <div class="contacto-content">
-                    <div class="contacto-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Dirección</h4>
-                                <p>Calle 85 #15-45, Local 102<br>Bogotá, Colombia</p>
-                            </div>
+        <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+            <div class="portfolio__container">
+                <h2 id="portfolio-title" class="portfolio__title">🚀 Mi Portafolio - Proyectos Destacados</h2>
+                <div class="portfolio__grid">
+                    <article class="portfolio__project portfolio__project--featured img-salon">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Salón de Belleza</h3>
+                            <p class="portfolio__project-desc">Sitio web moderno con galería de servicios y información de contacto</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="salon-de-belleza/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Salón de Belleza (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Teléfono</h4>
-                                <p>+57 (601) 234-5678<br>+57 310 456-7890</p>
-                            </div>
+                    </article>
+                    <article class="portfolio__project img-boutique">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Boutique</h3>
+                            <p class="portfolio__project-desc">E-commerce moderno con catálogo de productos y diseño elegante</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • JavaScript</div>
+                            <a href="boutique/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Boutique (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@eleganciadorada.com<br>ventas@eleganciadorada.com</p>
-                            </div>
+                    </article>
+                    <article class="portfolio__project img-cell">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Store Cell</h3>
+                            <p class="portfolio__project-desc">Tienda online de celulares con catálogo interactivo</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="store-cell/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Celulares (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Horario</h4>
-                                <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 6:00 PM</p>
-                            </div>
+                    </article>
+                    <article class="portfolio__project img-restaurant">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Restaurant</h3>
+                            <p class="portfolio__project-desc">Página web para restaurante con menú digital y reservas</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • UX/UI</div>
+                            <a href="restaurant/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Página web para Restaurante (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
+                    </article>
+                    <article class="portfolio__project img-shoes">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Sports Store</h3>
+                            <p class="portfolio__project-desc">Tienda online de zapatos con diseño moderno y funcional</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="store-shoes/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
+                    </article>
+                    <article class="portfolio__project img-joyas img-joyeria">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__project-name">Joyeria</h3>
+                            <p class="portfolio__project-desc">Tienda online de joyas, prendas y accesorios</p>
+                            <div class="portfolio__tech">HTML5 • CSS3 • Responsive</div>
+                            <a href="joyeria/index.html" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto: Tienda de Zapatos (se abre en nueva ventana)" class="portfolio__link">Ver Proyecto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="form" id="form" aria-labelledby="contact-title">
+            <div class="form__container">
+                <h2 id="contact-title" class="form__title">📬 Contacto - Solicita tu Cotización u Información</h2>
+                <form class="form__form" action="https://formspree.io/f/mjkekdqz" method="POST" aria-label="Formulario de contacto">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label class="form__label" for="firstName">Nombre*</label>
+                            <input class="form__input" type="text" id="firstName" name="firstName" placeholder="Tu nombre" required aria-required="true" autocomplete="given-name">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="lastName">Apellido*</label>
+                            <input class="form__input" type="text" id="lastName" name="lastName" placeholder="Tu apellido" required aria-required="true" autocomplete="family-name">
                         </div>
                     </div>
-                    
-                    <form class="contacto-form">
-                        <div class="form-group">
-                            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="email">Correo Electrónico*</label>
+                            <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required aria-required="true" autocomplete="email">
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="phone">Teléfono (opcional)</label>
+                            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+57 300 123 4567" autocomplete="tel">
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="telefono" placeholder="Teléfono">
+                    </div>
+                    <div class="form__row form__row--full">
+                        <div class="form__group">
+                            <label class="form__label" for="message">Cuéntame sobre tu proyecto*</label>
+                            <textarea class="form__textarea" id="message" name="message" placeholder="Describe tu proyecto: tipo de sitio web, funcionalidades que necesitas, presupuesto aproximado, etc." required aria-required="true"></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea id="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-enviar">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                        </button>
-                    </form>
+                    </div>
+                    <div class="form__row form__row--full">
+                        <button class="form__submit" type="submit">Enviar Mensaje y Solicitar Cotización</button>
+                    </div>
+                </form>
+                <div class="form__alternative">
+                    <p>También puedes contactarme directamente:</p>
+                    <div class="contact__info">
+                        <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email">📧 webdev.rafel@gmail.com</a>
+                        <a href="https://wa.me/573122915287" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">📱 WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3><i class="fas fa-gem"></i> Elegancia Dorada</h3>
-                    <p>Joyas únicas para momentos especiales. Calidad y elegancia en cada pieza.</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Información</h4>
-                    <ul>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Términos y Condiciones</a></li>
-                        <li><a href="#">Garantía</a></li>
-                        <li><a href="#">Envíos</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Suscríbete para recibir ofertas exclusivas</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email" required>
-                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                    </form>
-                </div>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573122915287?text=Hola,%20estoy%20interesado%20en%20tus%20servicios.%20Me%20gustaría%20recibir%20más%20información." 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
+        Contactame por WhatsApp
+    </a>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__content">
+            <div class="footer__main">
+                <p>© 2025 Rafael - WebDev.Rafel. Todos los derechos reservados.</p>
+                <p>Desarrollador Web en Colombia | Especialista en Páginas Web Modernas y Responsive</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Elegancia Dorada. Todos los derechos reservados.</p>
+            <div class="footer__contact">
+                <p>Contacto: <a href="mailto:webdev.rafel@gmail.com" aria-label="Enviar email a webdev.rafel@gmail.com">webdev.rafel@gmail.com</a></p>
             </div>
+            <div class="footer__legal">
+                <a href="#privacy" aria-label="Ver política de privacidad">Política de Privacidad</a> | 
+                <a href="#terms" aria-label="Ver términos de uso">Términos de Uso</a>
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/profile.php?id=61579849271013" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Facebook">Facebook</a> | 
+                <a href="https://www.instagram.com/webdev.rafel/" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Instagram">Instagram</a>
+            </div>
+            <hr class="footer__divider">
         </div>
     </footer>
 
-    <!-- Botón WhatsApp Flotante -->
-    <a href="https://wa.me/573104567890?text=Hola,%20estoy%20interesado%20en%20sus%20joyas" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+  
 
-    <!-- Modal del Carrito -->
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
-                <button class="close-modal" onclick="cerrarCarrito()">&times;</button>
-            </div>
-            <div class="modal-body" id="cartItems">
-                <p class="empty-cart">Tu carrito está vacío</p>
-            </div>
-            <div class="modal-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span id="cartTotal">$0</span>
-                </div>
-                <button class="btn-finalizar" onclick="mostrarFormasPago()">
-                    <i class="fas fa-credit-card"></i> Proceder al Pago
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Formas de Pago -->
-    <div id="paymentModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-credit-card"></i> Formas de Pago</h3>
-                <button class="close-modal" onclick="cerrarFormasPago()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="payment-methods">
-                    <div class="payment-method">
-                        <i class="fas fa-university"></i>
-                        <h4>Transferencia Bancaria</h4>
-                        <p><strong>Banco:</strong> Banco de Bogotá</p>
-                        <p><strong>Cuenta:</strong> 123-456789-01</p>
-                        <p><strong>Titular:</strong> Elegancia Dorada S.A.S</p>
-                    </div>
-                    <div class="payment-method">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <h4>Efectivo</h4>
-                        <p>Pago en efectivo en nuestra tienda física</p>
-                        <p>Calle 85 #15-45, Bogotá</p>
-                    </div>
-                    <div class="payment-method">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Nequi</h4>
-                        <p><strong>Número:</strong> 310 456-7890</p>
-                        <p>A nombre de Elegancia Dorada</p>
-                    </div>
-                    <div class="payment-method">
-                        <i class="fas fa-wallet"></i>
-                        <h4>Daviplata</h4>
-                        <p><strong>Número:</strong> 310 456-7890</p>
-                        <p>A nombre de Elegancia Dorada</p>
-                    </div>
-                </div>
-                <div class="payment-note">
-                    <i class="fas fa-info-circle"></i>
-                    <p>Una vez realizado el pago, envíanos el comprobante por WhatsApp al <strong>+57 310 456-7890</strong> para procesar tu pedido.</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-contacto-whatsapp" onclick="contactarWhatsApp()">
-                    <i class="fab fa-whatsapp"></i> Confirmar Pedido por WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-
+    <!-- Basic JavaScript for scroll to top -->
     <script>
-        // Datos de productos
-        const productos = [
-            { id: 0, nombre: "Anillo Brillante Eterno", precio: 2850000, descripcion: "Anillo de oro blanco 18k con diamante central de 1 quilate", imagen: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80" },
-            { id: 1, nombre: "Collar Perlas Clásicas", precio: 1450000, descripcion: "Collar de perlas naturales con broche de oro 14k", imagen: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&q=80" },
-            { id: 2, nombre: "Pulsera Elegancia", precio: 1890000, descripcion: "Pulsera de oro amarillo 18k con diseño contemporáneo", imagen: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=500&q=80" },
-            { id: 3, nombre: "Aretes Esmeralda Real", precio: 3200000, descripcion: "Aretes de oro con esmeraldas colombianas naturales", imagen: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&q=80" },
-            { id: 4, nombre: "Anillo Zafiro Azul", precio: 4100000, descripcion: "Anillo de platino con zafiro azul y diamantes laterales", imagen: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=80" },
-            { id: 5, nombre: "Collar Riviera", precio: 5750000, descripcion: "Collar de diamantes en oro blanco 18k, diseño riviera", imagen: "https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=500&q=80" }
-        ];
-
-        // Carrito de compras
-        let carrito = [];
-
-        // Toggle menú móvil
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Cerrar menú al hacer click en un enlace
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Header transparente en scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Funciones del carrito
-        function agregarAlCarrito(id) {
-            const producto = productos[id];
-            const itemExistente = carrito.find(item => item.id === id);
-            
-            if (itemExistente) {
-                itemExistente.cantidad++;
-            } else {
-                carrito.push({ ...producto, cantidad: 1 });
-            }
-            
-            actualizarCarrito();
-            mostrarNotificacion('Producto agregado al carrito');
-        }
-
-        function eliminarDelCarrito(id) {
-            carrito = carrito.filter(item => item.id !== id);
-            actualizarCarrito();
-        }
-
-        function actualizarCantidad(id, cambio) {
-            const item = carrito.find(item => item.id === id);
-            if (item) {
-                item.cantidad += cambio;
-                if (item.cantidad <= 0) {
-                    eliminarDelCarrito(id);
-                } else {
-                    actualizarCarrito();
-                }
-            }
-        }
-
-        function actualizarCarrito() {
-            const cartCount = document.querySelector('.cart-count');
-            const cartItems = document.getElementById('cartItems');
-            const cartTotal = document.getElementById('cartTotal');
-            
-            const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-            cartCount.textContent = totalItems;
-            
-            if (carrito.length === 0) {
-                cartItems.innerHTML = '<p class="empty-cart">Tu carrito está vacío</p>';
-                cartTotal.textContent = '$0';
-            } else {
-                let html = '';
-                let total = 0;
-                
-                carrito.forEach(item => {
-                    const subtotal = item.precio * item.cantidad;
-                    total += subtotal;
-                    
-                    html += `
-                        <div class="cart-item">
-                            <img src="${item.imagen}" alt="${item.nombre}">
-                            <div class="cart-item-info">
-                                <h4>${item.nombre}</h4>
-                                <p class="cart-item-precio">$${item.precio.toLocaleString('es-CO')}</p>
-                                <div class="cart-item-cantidad">
-                                    <button onclick="actualizarCantidad(${item.id}, -1)">-</button>
-                                    <span>${item.cantidad}</span>
-                                    <button onclick="actualizarCantidad(${item.id}, 1)">+</button>
-                                </div>
-                            </div>
-                            <div class="cart-item-subtotal">
-                                <p>$${subtotal.toLocaleString('es-CO')}</p>
-                                <button onclick="eliminarDelCarrito(${item.id})" class="btn-eliminar">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                });
-                
-                cartItems.innerHTML = html;
-                cartTotal.textContent = `$${total.toLocaleString('es-CO')}`;
-            }
-        }
-
-        function mostrarNotificacion(mensaje) {
-            const notif = document.createElement('div');
-            notif.className = 'notification';
-            notif.textContent = mensaje;
-            document.body.appendChild(notif);
-            
-            setTimeout(() => {
-                notif.classList.add('show');
-            }, 100);
-            
-            setTimeout(() => {
-                notif.classList.remove('show');
-                setTimeout(() => notif.remove(), 300);
-            }, 2000);
-        }
-
-        // Modales
-        const cartBtn = document.querySelector('.cart-btn');
-        const cartModal = document.getElementById('cartModal');
-        const paymentModal = document.getElementById('paymentModal');
-
-        cartBtn.addEventListener('click', () => {
-            cartModal.style.display = 'flex';
-        });
-
-        function cerrarCarrito() {
-            cartModal.style.display = 'none';
-        }
-
-        function cerrarFormasPago() {
-            paymentModal.style.display = 'none';
-        }
-
-        function mostrarFormasPago() {
-            if (carrito.length === 0) {
-                mostrarNotificacion('Tu carrito está vacío');
-                return;
-            }
-            cartModal.style.display = 'none';
-            paymentModal.style.display = 'flex';
-        }
-
-        function contactarWhatsApp() {
-            if (carrito.length === 0) {
-                mostrarNotificacion('Tu carrito está vacío');
-                return;
-            }
-            
-            let mensaje = '¡Hola! Quiero realizar un pedido:\n\n';
-            let total = 0;
-            
-            carrito.forEach(item => {
-                const subtotal = item.precio * item.cantidad;
-                total += subtotal;
-                mensaje += `• ${item.nombre} x${item.cantidad} - $${subtotal.toLocaleString('es-CO')}\n`;
-            });
-            
-            mensaje += `\nTotal: $${total.toLocaleString('es-CO')}`;
-            
-            const url = `https://wa.me/573104567890?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
-
-        function verDetalles(id) {
-            const producto = productos[id];
-            alert(`${producto.nombre}\n\n${producto.descripcion}\n\nPrecio: $${producto.precio.toLocaleString('es-CO')}`);
-        }
-
-        // Cerrar modales al hacer click fuera
-        window.addEventListener('click', (e) => {
-            if (e.target === cartModal) {
-                cerrarCarrito();
-            }
-            if (e.target === paymentModal) {
-                cerrarFormasPago();
-            }
-        });
-
-        // Formulario de contacto
-        document.querySelector('.contacto-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const telefono = document.getElementById('telefono').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            const whatsappMsg = `Hola, soy ${nombre}.\nEmail: ${email}\nTeléfono: ${telefono}\n\nMensaje: ${mensaje}`;
-            const url = `https://wa.me/573104567890?text=${encodeURIComponent(whatsappMsg)}`;
-            window.open(url, '_blank');
-            
-            e.target.reset();
-            mostrarNotificacion('Mensaje enviado. Te contactaremos pronto.');
-        });
-
-        // Newsletter
-        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            mostrarNotificacion('¡Gracias por suscribirte!');
-            e.target.reset();
+        
+        // Form submission feedback
+        const form = document.querySelector('.form__form');
+        form.addEventListener('submit', function() {
+            const submitBtn = form.querySelector('.form__submit');
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
         });
     </script>
+    <script>
+// Fix viewport height
+function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+
+// Detectar dispositivos Xiaomi/Redmi
+function detectXiaomi() {
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes('Mi ') || userAgent.includes('Redmi') || userAgent.includes('MIUI')) {
+        document.body.classList.add('xiaomi-device');
+    }
+}
+
+// Ejecutar al cargar y al cambiar orientación
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
+document.addEventListener('DOMContentLoaded', () => {
+    setVH();
+    detectXiaomi();
+});
+</script>
 </body>
 </html>
+
+
+
+
+
