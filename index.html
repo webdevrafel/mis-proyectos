@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -358,10 +357,10 @@
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/573122915287?text=Hola,%20estoy%20interesado%20en%20tus%20servicios.%20Me%20gustaría%20recibir%20más%20información." 
-       class="whatsapp-btn" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
+        class="whatsapp-btn" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Contactar por WhatsApp para solicitar información sobre desarrollo web">
         Contactame por WhatsApp
     </a>
 
@@ -386,7 +385,6 @@
         </div>
     </footer>
 
-  
 
     <!-- Basic JavaScript for scroll to top -->
     <script>
@@ -400,7 +398,7 @@
         });
     </script>
     <script>
-// Fix viewport height
+// Fix viewport height para dispositivos móviles
 function setVH() {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', vh + 'px');
@@ -414,19 +412,144 @@ function detectXiaomi() {
     }
 }
 
-// Ejecutar al cargar y al cambiar orientación
-window.addEventListener('resize', setVH);
-window.addEventListener('orientationchange', () => setTimeout(setVH, 100));
-document.addEventListener('DOMContentLoaded', () => {
+// Controlar visibilidad del botón de WhatsApp en móviles
+function handleWhatsAppButton() {
+    const whatsappBtn = document.querySelector('.whatsapp-btn');
+    const heroSection = document.querySelector('#hero');
+    const formSection = document.querySelector('#form');
+    
+    if (!whatsappBtn || window.innerWidth > 768) {
+        // En desktop, siempre visible
+        if (whatsappBtn) whatsappBtn.classList.add('visible');
+        return;
+    }
+    
+    // Obtener posiciones de las secciones
+    const heroRect = heroSection.getBoundingClientRect();
+    const formRect = formSection.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Verificar si estamos en el hero (parte superior visible)
+    const isInHero = heroRect.top < windowHeight && heroRect.bottom > 0;
+    
+    // Verificar si estamos en el form (parte superior visible)
+    const isInForm = formRect.top < windowHeight && formRect.bottom > 0;
+    
+    // Mostrar botón solo en hero o form en móviles
+    if (isInHero || isInForm) {
+        whatsappBtn.classList.add('visible');
+    } else {
+        whatsappBtn.classList.remove('visible');
+    }
+}
+
+// Form submission feedback
+function handleFormSubmit() {
+    const form = document.querySelector('.form__form');
+    if (!form) return;
+    
+    form.addEventListener('submit', function() {
+        const submitBtn = form.querySelector('.form__submit');
+        if (submitBtn) {
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+        }
+    });
+}
+
+// Animación de aparición para elementos
+function observeElements() {
+    const elements = document.querySelectorAll('.service__card, .skill__item, .portfolio__project');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in', 'visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    elements.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+}
+
+// Smooth scroll para enlaces internos
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Cerrar menú móvil si está abierto
+                const checkbox = document.getElementById('open-menu');
+                if (checkbox) checkbox.checked = false;
+            }
+        });
+    });
+}
+
+// Cerrar menú móvil al hacer clic fuera
+function initMobileMenuClose() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const checkbox = document.getElementById('open-menu');
+    
+    if (!mobileNav || !checkbox) return;
+    
+    document.addEventListener('click', function(e) {
+        if (checkbox.checked && 
+            !mobileNav.contains(e.target) && 
+            !e.target.matches('.header__open-nav-button')) {
+            checkbox.checked = false;
+        }
+    });
+}
+
+// Inicializar todo cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
     setVH();
     detectXiaomi();
+    handleFormSubmit();
+    observeElements();
+    initSmoothScroll();
+    initMobileMenuClose();
+    handleWhatsAppButton();
+});
+
+// Ejecutar en scroll para el botón de WhatsApp
+let scrollTimeout;
+window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(handleWhatsAppButton, 50);
+}, { passive: true });
+
+// Ejecutar al cambiar tamaño de ventana
+window.addEventListener('resize', function() {
+    setVH();
+    handleWhatsAppButton();
+});
+
+// Ejecutar al cambiar orientación
+window.addEventListener('orientationchange', function() {
+    setTimeout(() => {
+        setVH();
+        handleWhatsAppButton();
+    }, 100);
 });
 </script>
 </body>
 </html>
-
-
-
-
-
-
